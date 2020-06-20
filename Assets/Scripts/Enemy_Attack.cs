@@ -12,28 +12,49 @@ public class Enemy_Attack : MonoBehaviour
     public float projectileSpeed;
     private float shootTime; 
     public float startShootTime;
+    [SerializeField] private Transform pfFieldOfView;
+    [SerializeField] private float fov;
+    [SerializeField] private float viewDistance;
+    private FieldOfView fieldOfView;
 
+    Vector3 aimDir;
     void Start()
     {
         shootTime = startShootTime;
+        fieldOfView = Instantiate(pfFieldOfView,null).GetComponent<FieldOfView>();
+        fieldOfView.SetFov(fov);
+        fieldOfView.SetViewDistance(viewDistance);
+    
     }
     void Update()
     {
-        if (Player.transform.position.x - transform.position.x < 3.5f && Player.transform.position.y - transform.position.y < 3.5f)
+        aimDir = Enemy_Patrol.GetAimDir();
+        fieldOfView.SetOrigin(transform.position);
+        fieldOfView.SetAimDirection(aimDir);
+
+        if (Player.transform.position.x - transform.position.x < viewDistance && Player.transform.position.y - transform.position.y < viewDistance)
         {
-            if (shootTime <= 0)
+            Vector2 dirToPlayer = (Player.transform.position - transform.position).normalized;
+
+            //Debug.Log(fov/2f);
+            float angle = Vector2.Angle(aimDir, dirToPlayer);
+            if (angle < fov/2f )
             {
-                GameObject arrow = Instantiate(projectile, transform.position, Quaternion.identity);
-                Vector2 playerPos = Player.transform.position;
-                Vector2 enemyPos = transform.position;
-                Vector2 direction = (playerPos - enemyPos).normalized;
-                arrow.GetComponent<Rigidbody2D>().velocity = direction * projectileSpeed;
-                arrow.GetComponent<Damage>().damage = Random.Range(minDamage, maxDamage);
-                shootTime = startShootTime;
-            }
-            else
-            {
-                shootTime -= Time.deltaTime;
+                Debug.Log(angle);
+                if (shootTime <= 0)
+                {
+                    GameObject arrow = Instantiate(projectile, transform.position, Quaternion.identity);
+                    Vector2 playerPos = Player.transform.position;
+                    Vector2 enemyPos = transform.position;
+                    Vector2 direction = dirToPlayer;
+                    arrow.GetComponent<Rigidbody2D>().velocity = direction * projectileSpeed;
+                    arrow.GetComponent<Damage>().damage = Random.Range(minDamage, maxDamage);
+                    shootTime = startShootTime;
+                }
+                else
+                {
+                    shootTime -= Time.deltaTime;
+                }
             }
         }
 

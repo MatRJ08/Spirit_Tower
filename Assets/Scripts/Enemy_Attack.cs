@@ -32,15 +32,16 @@ public class Enemy_Attack : MonoBehaviour
         fieldOfView.SetOrigin(transform.position);
         fieldOfView.SetAimDirection(aimDir);
 
-        if (Player.transform.position.x - transform.position.x < viewDistance && Player.transform.position.y - transform.position.y < viewDistance)
+        if (Mathf.Abs(Player.transform.position.x - transform.position.x) < viewDistance && Mathf.Abs(Player.transform.position.y - transform.position.y) < viewDistance)
         {
+            Debug.Log(Player.transform.position.x - transform.position.x);
             Vector2 dirToPlayer = (Player.transform.position - transform.position).normalized;
 
             //Debug.Log(fov/2f);
             float angle = Vector2.Angle(aimDir, dirToPlayer);
             if (angle < fov/2f )
             {
-                Debug.Log(angle);
+                //Debug.Log(angle);
                 if (shootTime <= 0)
                 {
                     GameObject arrow = Instantiate(projectile, transform.position, Quaternion.identity);

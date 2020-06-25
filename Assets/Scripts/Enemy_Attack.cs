@@ -16,6 +16,7 @@ public class Enemy_Attack : MonoBehaviour
     [SerializeField] private float fov;
     [SerializeField] private float viewDistance;
     private FieldOfView fieldOfView;
+    private Enemy_Patrol Patrol;
 
     Vector3 aimDir;
     void Start()
@@ -24,11 +25,13 @@ public class Enemy_Attack : MonoBehaviour
         fieldOfView = Instantiate(pfFieldOfView,null).GetComponent<FieldOfView>();
         fieldOfView.SetFov(fov);
         fieldOfView.SetViewDistance(viewDistance);
-    
+        Patrol = GetComponent<Enemy_Patrol>();
+
     }
     void Update()
     {
-        aimDir = Enemy_Patrol.GetAimDir();
+
+        aimDir = Patrol.GetAimDir();
         fieldOfView.SetOrigin(transform.position);
         fieldOfView.SetAimDirection(aimDir);
 

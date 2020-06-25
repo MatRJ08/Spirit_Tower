@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3.5
-  startWaitTime: 2
+  startWaitTime: 1
   moveSpots:
   - {fileID: 1717692430}
   - {fileID: 1410646418}
@@ -56509,6 +56509,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1059051555}
   - component: {fileID: 1059051554}
+  - component: {fileID: 1059051556}
   m_Layer: 0
   m_Name: Spectral_eye2
   m_TagString: Untagged
@@ -56581,6 +56582,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1059051556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059051553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aa9f044742e12a4780703be51bd65e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fov: 70
+  viewDistance: 5
+  minRotation: 0
+  maxRotation: 360
+  pfFieldOfView: {fileID: 8425128754498616362, guid: 53efc9cc64e53a94eae317488903b0e7,
+    type: 3}
+  incrementAngleSpeed: 2
 --- !u!1 &1071772346
 GameObject:
   m_ObjectHideFlags: 0
@@ -56983,7 +57003,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3.5
-  startWaitTime: 2
+  startWaitTime: 1
   moveSpots:
   - {fileID: 1323801494}
   - {fileID: 1123554812}
@@ -57114,6 +57134,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1316030951}
   - component: {fileID: 1316030950}
+  - component: {fileID: 1316030952}
   m_Layer: 0
   m_Name: Spectral_eye1
   m_TagString: Untagged
@@ -57180,12 +57201,31 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1316030949}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.13, y: -7.24, z: 0}
+  m_LocalPosition: {x: 6, y: -12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1316030952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316030949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aa9f044742e12a4780703be51bd65e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fov: 50
+  viewDistance: 9
+  minRotation: 25
+  maxRotation: 140
+  pfFieldOfView: {fileID: 8425128754498616362, guid: 53efc9cc64e53a94eae317488903b0e7,
+    type: 3}
+  incrementAngleSpeed: 1
 --- !u!1 &1323801493
 GameObject:
   m_ObjectHideFlags: 0
@@ -57286,6 +57326,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1526182821}
   - component: {fileID: 1526182820}
+  - component: {fileID: 1526182822}
   m_Layer: 0
   m_Name: Spectral_eye3
   m_TagString: Untagged
@@ -57352,12 +57393,31 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1526182819}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26, y: -30, z: 0}
+  m_LocalPosition: {x: -28, y: -30, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1526182822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526182819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aa9f044742e12a4780703be51bd65e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fov: 60
+  viewDistance: 5
+  minRotation: 45
+  maxRotation: 150
+  pfFieldOfView: {fileID: 8425128754498616362, guid: 53efc9cc64e53a94eae317488903b0e7,
+    type: 3}
+  incrementAngleSpeed: 1
 --- !u!1 &1563865215
 GameObject:
   m_ObjectHideFlags: 0
@@ -58147,7 +58207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3.5
-  startWaitTime: 2
+  startWaitTime: 1
   moveSpots:
   - {fileID: 1213603834}
   - {fileID: 126071501}

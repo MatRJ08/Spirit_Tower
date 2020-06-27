@@ -58504,7 +58504,7 @@ MonoBehaviour:
   startShootTime: 0.2
   pfFieldOfView: {fileID: 8425128754498616362, guid: 53efc9cc64e53a94eae317488903b0e7,
     type: 3}
-  fov: 75
+  fov: 120
   viewDistance: 8
 --- !u!114 &1912597598
 MonoBehaviour:

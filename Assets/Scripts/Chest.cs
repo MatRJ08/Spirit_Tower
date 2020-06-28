@@ -41,5 +41,6 @@ public class Chest : MonoBehaviour, Interactable
     public void StopInteract()
     {
         spriteRenderer.sprite = closeSprite;
+        isOpen = false;
     }
 }

@@ -10,7 +10,17 @@ public class Chest : MonoBehaviour, Interactable
     [SerializeField]
 
     private Sprite openSprite, closeSprite;
+
+    [SerializeField] private ParticleSystem pfparticleSystem;
+
+
     bool isOpen;
+
+    private void Start()
+    {
+        isOpen = false;
+    }
+
     public void OnTriggerEnter2D (Collider2D collision)
     {
         if (collision.tag == "Player")
@@ -27,20 +37,21 @@ public class Chest : MonoBehaviour, Interactable
     }
     public void Interact()
     {
-        if (isOpen)
+        if (!isOpen)
         {
-            StopInteract();
-        }
-        else
-        {
-            isOpen = true;
             spriteRenderer.sprite = openSprite;
+
+            Transform particleTransform = pfparticleSystem.transform;
+            particleTransform.position = transform.position;
+            ParticleSystem coins = Instantiate(pfparticleSystem, particleTransform);
+            coins.Play(true);
+
+            isOpen = true;
         }
 
     }
     public void StopInteract()
     {
-        spriteRenderer.sprite = closeSprite;
-        isOpen = false;
+        
     }
 }

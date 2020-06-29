@@ -314,6 +314,8 @@ MonoBehaviour:
     type: 3}
   closeSprite: {fileID: 1753205982242350755, guid: a26efae3b5c93b04885823d1f267b747,
     type: 3}
+  pfparticleSystem: {fileID: 369000304502225047, guid: e1a0084749b019a42804aa4ee93edeeb,
+    type: 3}
 --- !u!212 &222824791
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -109561,6 +109563,8 @@ MonoBehaviour:
     type: 3}
   closeSprite: {fileID: 1753205982242350755, guid: a26efae3b5c93b04885823d1f267b747,
     type: 3}
+  pfparticleSystem: {fileID: 369000304502225047, guid: e1a0084749b019a42804aa4ee93edeeb,
+    type: 3}
 --- !u!212 &1064982239
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -110332,6 +110336,8 @@ MonoBehaviour:
   openSprite: {fileID: 318953615281452700, guid: a26efae3b5c93b04885823d1f267b747,
     type: 3}
   closeSprite: {fileID: 1753205982242350755, guid: a26efae3b5c93b04885823d1f267b747,
+    type: 3}
+  pfparticleSystem: {fileID: 369000304502225047, guid: e1a0084749b019a42804aa4ee93edeeb,
     type: 3}
 --- !u!212 &1366592145
 SpriteRenderer:

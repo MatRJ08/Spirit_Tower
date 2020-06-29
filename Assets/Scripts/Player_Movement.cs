@@ -13,10 +13,10 @@ public class Player_Movement : MonoBehaviour
 
     public LayerMask stopMovement;
 
-    private void Start() 
+    private void Start()
     {
         movePoint.parent = null;
-        
+
     }
 
     private void Update()
@@ -26,7 +26,7 @@ public class Player_Movement : MonoBehaviour
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
-        
+
     }
 
     private void FixedUpdate()

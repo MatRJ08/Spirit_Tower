@@ -16,14 +16,14 @@ public class Player_Attack : MonoBehaviour
         {
             Attack();
         }
-        
+
     }
     void Attack()
     {
         animator.SetTrigger("Attack");
 
-        Collider2D[] hitEnemies=Physics2D.OverlapCircleAll(attackPoint.position,attackRange, enemyLayers);
-        foreach(Collider2D enemy in hitEnemies)
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+        foreach (Collider2D enemy in hitEnemies)
         {
             enemy.GetComponent<Enemy_Attack>().TakeDamage(attackDamage);
         }

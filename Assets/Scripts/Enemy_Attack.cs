@@ -5,14 +5,14 @@ using UnityEngine;
 
 public class Enemy_Attack : MonoBehaviour
 {
-    public  int maxHealth = 100;
+    public int maxHealth = 100;
     private int currentHealth;
     public GameObject Player;
     public GameObject projectile;
     public float minDamage;
     public float maxDamage;
     public float projectileSpeed;
-    private float shootTime; 
+    private float shootTime;
     public float startShootTime;
     [SerializeField] private Transform pfFieldOfView;
     [SerializeField] private float fov;
@@ -25,7 +25,7 @@ public class Enemy_Attack : MonoBehaviour
     {
         currentHealth = maxHealth;
         shootTime = startShootTime;
-        fieldOfView = Instantiate(pfFieldOfView,null).GetComponent<FieldOfView>();
+        fieldOfView = Instantiate(pfFieldOfView, null).GetComponent<FieldOfView>();
         fieldOfView.SetFov(fov);
         fieldOfView.SetViewDistance(viewDistance);
         Patrol = GetComponent<Enemy_Patrol>();
@@ -45,7 +45,7 @@ public class Enemy_Attack : MonoBehaviour
 
             //Debug.Log(fov/2f);
             float angle = Vector2.Angle(aimDir, dirToPlayer);
-            if (angle < fov/2f )
+            if (angle < fov / 2f)
             {
                 //Debug.Log(angle);
                 if (shootTime <= 0)

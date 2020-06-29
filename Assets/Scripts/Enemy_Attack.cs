@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Enemy_Attack : MonoBehaviour
 {
+    public  int maxHealth = 100;
+    private int currentHealth;
     public GameObject Player;
     public GameObject projectile;
     public float minDamage;
@@ -21,6 +23,7 @@ public class Enemy_Attack : MonoBehaviour
     Vector3 aimDir;
     void Start()
     {
+        currentHealth = maxHealth;
         shootTime = startShootTime;
         fieldOfView = Instantiate(pfFieldOfView,null).GetComponent<FieldOfView>();
         fieldOfView.SetFov(fov);
@@ -37,7 +40,7 @@ public class Enemy_Attack : MonoBehaviour
 
         if (Mathf.Abs(Player.transform.position.x - transform.position.x) < viewDistance && Mathf.Abs(Player.transform.position.y - transform.position.y) < viewDistance)
         {
-            Debug.Log(Player.transform.position.x - transform.position.x);
+            //Debug.Log(Player.transform.position.x - transform.position.x);
             Vector2 dirToPlayer = (Player.transform.position - transform.position).normalized;
 
             //Debug.Log(fov/2f);
@@ -62,5 +65,16 @@ public class Enemy_Attack : MonoBehaviour
             }
         }
 
+    }
+
+    public void TakeDamage(int damage)
+    {
+        Debug.Log("damage: " + damage);
+        currentHealth -= damage;
+        Debug.Log("health " + currentHealth);
+        if (currentHealth < 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

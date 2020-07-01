@@ -10,7 +10,7 @@ public class Enemy_Patrol : MonoBehaviour
     public Transform[] moveSpots;// Lista de puntos de vigilancia 
     private int spot; //Iterador de la lista
     public Transform Player;
-    private static Vector3 lastMoveDir;
+    private Vector3 lastMoveDir;
     private Vector3 spotDir;
 
 
@@ -52,7 +52,7 @@ public class Enemy_Patrol : MonoBehaviour
         }
     }
 
-    public  static Vector3 GetAimDir()
+    public  Vector3 GetAimDir()
     {
         return lastMoveDir;
     }

@@ -95,6 +95,10 @@ public class FieldOfView : MonoBehaviour
         startinAngle = GetAngleFromVectorFloat(aimDirection) + fov / 2f;
     }
 
+    public void SetAimDirection(float aimDirection) {
+        startinAngle = aimDirection + fov / 2f;
+    }
+
     public void SetFov(float newFov)
     {
         fov = newFov;

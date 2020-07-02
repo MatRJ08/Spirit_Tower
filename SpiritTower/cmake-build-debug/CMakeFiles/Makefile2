@@ -75,12 +75,12 @@ clean: CMakeFiles\SpiritTower.dir\clean
 CMakeFiles\SpiritTower.dir\all:
 	$(MAKE) -f CMakeFiles\SpiritTower.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\SpiritTower.dir\depend
 	$(MAKE) -f CMakeFiles\SpiritTower.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\SpiritTower.dir\build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target SpiritTower"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4 "Built target SpiritTower"
 .PHONY : CMakeFiles\SpiritTower.dir\all
 
 # Build rule for subdir invocation for target.
 CMakeFiles\SpiritTower.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower\cmake-build-debug\CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower\cmake-build-debug\CMakeFiles 4
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) CMakeFiles\SpiritTower.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles\SpiritTower.dir\rule

@@ -3,4 +3,4 @@ project(SpiritTower)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(SpiritTower main.cpp)
+add_executable(SpiritTower src/server.cpp src/main.cpp src/server.h)

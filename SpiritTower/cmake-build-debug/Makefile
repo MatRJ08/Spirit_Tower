@@ -124,32 +124,86 @@ SpiritTower\fast:
 	$(MAKE) -f CMakeFiles\SpiritTower.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\SpiritTower.dir\build
 .PHONY : SpiritTower\fast
 
-main.obj: main.cpp.obj
+src\Player.obj: src\Player.cpp.obj
 
-.PHONY : main.obj
+.PHONY : src\Player.obj
 
 # target to build an object file
-main.cpp.obj:
-	$(MAKE) -f CMakeFiles\SpiritTower.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\SpiritTower.dir\main.cpp.obj
-.PHONY : main.cpp.obj
+src\Player.cpp.obj:
+	$(MAKE) -f CMakeFiles\SpiritTower.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\SpiritTower.dir\src\Player.cpp.obj
+.PHONY : src\Player.cpp.obj
 
-main.i: main.cpp.i
+src\Player.i: src\Player.cpp.i
 
-.PHONY : main.i
+.PHONY : src\Player.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles\SpiritTower.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\SpiritTower.dir\main.cpp.i
-.PHONY : main.cpp.i
+src\Player.cpp.i:
+	$(MAKE) -f CMakeFiles\SpiritTower.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\SpiritTower.dir\src\Player.cpp.i
+.PHONY : src\Player.cpp.i
 
-main.s: main.cpp.s
+src\Player.s: src\Player.cpp.s
 
-.PHONY : main.s
+.PHONY : src\Player.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles\SpiritTower.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\SpiritTower.dir\main.cpp.s
-.PHONY : main.cpp.s
+src\Player.cpp.s:
+	$(MAKE) -f CMakeFiles\SpiritTower.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\SpiritTower.dir\src\Player.cpp.s
+.PHONY : src\Player.cpp.s
+
+src\main.obj: src\main.cpp.obj
+
+.PHONY : src\main.obj
+
+# target to build an object file
+src\main.cpp.obj:
+	$(MAKE) -f CMakeFiles\SpiritTower.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\SpiritTower.dir\src\main.cpp.obj
+.PHONY : src\main.cpp.obj
+
+src\main.i: src\main.cpp.i
+
+.PHONY : src\main.i
+
+# target to preprocess a source file
+src\main.cpp.i:
+	$(MAKE) -f CMakeFiles\SpiritTower.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\SpiritTower.dir\src\main.cpp.i
+.PHONY : src\main.cpp.i
+
+src\main.s: src\main.cpp.s
+
+.PHONY : src\main.s
+
+# target to generate assembly for a file
+src\main.cpp.s:
+	$(MAKE) -f CMakeFiles\SpiritTower.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\SpiritTower.dir\src\main.cpp.s
+.PHONY : src\main.cpp.s
+
+src\server.obj: src\server.cpp.obj
+
+.PHONY : src\server.obj
+
+# target to build an object file
+src\server.cpp.obj:
+	$(MAKE) -f CMakeFiles\SpiritTower.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\SpiritTower.dir\src\server.cpp.obj
+.PHONY : src\server.cpp.obj
+
+src\server.i: src\server.cpp.i
+
+.PHONY : src\server.i
+
+# target to preprocess a source file
+src\server.cpp.i:
+	$(MAKE) -f CMakeFiles\SpiritTower.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\SpiritTower.dir\src\server.cpp.i
+.PHONY : src\server.cpp.i
+
+src\server.s: src\server.cpp.s
+
+.PHONY : src\server.s
+
+# target to generate assembly for a file
+src\server.cpp.s:
+	$(MAKE) -f CMakeFiles\SpiritTower.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\SpiritTower.dir\src\server.cpp.s
+.PHONY : src\server.cpp.s
 
 # Help Target
 help:
@@ -160,9 +214,15 @@ help:
 	@echo ... rebuild_cache
 	@echo ... SpiritTower
 	@echo ... edit_cache
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... src/Player.obj
+	@echo ... src/Player.i
+	@echo ... src/Player.s
+	@echo ... src/main.obj
+	@echo ... src/main.i
+	@echo ... src/main.s
+	@echo ... src/server.obj
+	@echo ... src/server.i
+	@echo ... src/server.s
 .PHONY : help
 
 

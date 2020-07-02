@@ -6,15 +6,17 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/AdrCh/Documents/GitHub/Spirit_Tower/SpiritTower/main.cpp
-windows.h
--
-winsock2.h
--
-ws2tcpip.h
--
-stdlib.h
+C:/Users/AdrCh/Documents/GitHub/Spirit_Tower/SpiritTower/src/server.cpp
+server.h
+C:/Users/AdrCh/Documents/GitHub/Spirit_Tower/SpiritTower/src/server.h
+
+C:/Users/AdrCh/Documents/GitHub/Spirit_Tower/SpiritTower/src/server.h
+WS2tcpip.h
 -
 stdio.h
+-
+iostream
+-
+string
 -
 

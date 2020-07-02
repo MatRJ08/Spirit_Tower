@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -50,6 +51,10 @@ public class Enemy_Patrol : MonoBehaviour
                 waitTime -= Time.deltaTime;
             }
         }
+
+        //Client.instance.SendEnemyData("UPDATE|ENEMY|" + gameObject.name + "|X:" + Math.Round(transform.position.x) + ",Y:" + Math.Round(transform.position.y));
+        
+
     }
 
     public  Vector3 GetAimDir()

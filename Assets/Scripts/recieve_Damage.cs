@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class recieve_Damage : MonoBehaviour
 {
@@ -13,6 +15,7 @@ public class recieve_Damage : MonoBehaviour
     }
     public void DealDamage(float damage)
     {
+        Client.instance.SendData("REQUEST|PLAYER|DAMAGE:" + Math.Round(damage));
         health -= damage;
         CheckDeath();
     }
@@ -28,7 +31,7 @@ public class recieve_Damage : MonoBehaviour
     {
         if (health <= 0)
         {
-            Destroy(gameObject);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }

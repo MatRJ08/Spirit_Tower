@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/SpiritTower.dir/main.cpp.obj"
+  "CMakeFiles/SpiritTower.dir/src/Player.cpp.obj"
+  "CMakeFiles/SpiritTower.dir/src/main.cpp.obj"
+  "CMakeFiles/SpiritTower.dir/src/server.cpp.obj"
   "SpiritTower.exe"
   "SpiritTower.exe.manifest"
   "SpiritTower.lib"

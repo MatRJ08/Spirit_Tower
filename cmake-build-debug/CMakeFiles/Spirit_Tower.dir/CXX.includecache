@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ashley/CLionProjects/Spirit_Tower/A_star.cpp
+bits/stdc++.h
+-
+A_star.h
+/home/ashley/CLionProjects/Spirit_Tower/A_star.h
+
+/home/ashley/CLionProjects/Spirit_Tower/A_star.h
+iostream
+-
+vector
+-
+string
+-
+lista.h
+/home/ashley/CLionProjects/Spirit_Tower/lista.h
+
+/home/ashley/CLionProjects/Spirit_Tower/Nodo.h
+iostream
+-
+string
+-
+
+/home/ashley/CLionProjects/Spirit_Tower/lista.h
+fstream
+-
+string
+-
+cstdlib
+-
+iostream
+-
+Nodo.h
+/home/ashley/CLionProjects/Spirit_Tower/Nodo.h
+

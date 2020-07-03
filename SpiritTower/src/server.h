@@ -21,6 +21,7 @@ public:
     int run();
     void readMessage(std::string message);
     void sendMessage(char message[]);
+    void readBuffer(std::string buffer);
 
 private:
     static Server* instance;

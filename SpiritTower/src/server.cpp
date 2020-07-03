@@ -31,7 +31,6 @@ void Server::readMessage(std::string message){
     std::string delimiter = "|";
     // UPDATE|PLAYER|X:00,Y:00;HP:00
     if (message.substr(0,message.find(delimiter)) == "UPDATE"){
-
         message = message.substr(message.find(delimiter)+1,message.size()-1);
 
         // PLAYER|X:00,Y:00;HP:00
@@ -56,19 +55,55 @@ void Server::readMessage(std::string message){
             int Y = std::stoi(y.substr(y.find(":")+1,y.length()-1));
             int HP = std::stoi(hp.substr(hp.find(":")+1,hp.length()-1));
 
+            std::cout << "Player = " << "X: " << X << " - Y: " << Y << " - HP: " << HP << std::endl;
             // TO-DO
             // Almacenar datos
 
 
-        } else {
+        } else  if (message.substr(0,message.find(delimiter)) == "ENEMY"){
+            message = message.substr(message.find(delimiter)+1,message.size()-1);
+
+            std::string NAME = message.substr(0, message.find(delimiter));
+
+            message = message.substr(message.find(delimiter)+1,message.size()-1);
+
+            // X:00
+            std::string x = message.substr(0,message.find(","));
+
+            message = message.substr(message.find(",")+1, message.size()-1);
+
+            // Y:00
+            std::string y = message;
+
+            int X = std::stoi(x.substr(x.find(":")+1,x.length()-1));
+            int Y = std::stoi(y.substr(y.find(":")+1,y.length()-1));
+
+
+            std::cout << "Enemy name: " << NAME << " - X:" << X << " - Y:" << Y << std::endl;
             // TO-DO
-            // ENEMY update
+            // Almacenar datos
 
         }
     } else if (message.substr(0,message.find(delimiter)) == "REQUEST"){
-        std::cout << message << std::endl;
-        // TO-DO
-        // Manejar peticiones
+        message = message.substr(message.find(delimiter)+1,message.size()-1);
+
+        if (message.substr(0,message.find(delimiter)) == "PLAYER"){
+            message = message.substr(message.find(delimiter)+1,message.size()-1);
+
+            int damageReceived = std::stoi(message.substr(message.find(":")+1));
+
+            std::cout << "Player should take " << damageReceived << " damage. BANZAI" << std::endl;
+            // TO-DO
+            // * Realizar accion sobre jugador y enviar resultado
+
+        } else if (message.substr(0,message.find(delimiter)) == "ENEMY"){
+            message = message.substr(message.find(delimiter)+1,message.size()-1);
+
+            // TO-DO
+            // * Verificar tipo de peticion (Jugador ubicado, vida, etc...)
+            // * Realizar accion sobre enemigo y enviar resultado
+        }
+
     }
 }
 
@@ -77,12 +112,29 @@ void Server::readMessage(std::string message){
  * recibida
  * @param message - mensaje a enviar por sockets
  */
-void Server::sendMessage(char message[]){
+void Server::sendMessage(char message[]) {
     iSendResult = send(ClientSocket, message, iRecvResult, 0);
-    if (iSendResult == SOCKET_ERROR){
+    if (iSendResult == SOCKET_ERROR) {
         closesocket(ClientSocket);
         WSACleanup();
     }
+}
+
+/**
+ * Esta funcion lee los datos recibidos del cliente y separa los mensajes en el caso
+ * de que estos lleguen varios a la vez
+ * @param buffer
+ */
+void Server::readBuffer(std::string buffer) {
+    std::string delimiter = "~";
+    if (buffer.find(delimiter) == buffer.size()-1){
+        readMessage(buffer.substr(0, buffer.find(delimiter)));
+    } else {
+        readMessage(buffer.substr(0, buffer.find(delimiter)));
+        buffer = buffer.substr(buffer.find(delimiter)+1);
+        readBuffer(buffer);
+    }
+
 }
 
 /**
@@ -154,7 +206,9 @@ int Server::run(){
 
 
             recvbuf[iRecvResult] = '\0';
-            readMessage(recvbuf);
+
+
+            readBuffer(recvbuf);
             //printf("%s \n",recvbuf);
 
             //SendMessage("Message received");

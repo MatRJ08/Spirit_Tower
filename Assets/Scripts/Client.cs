@@ -10,6 +10,7 @@ public class Client : MonoBehaviour
 {
     private TcpClient socket;
     private Thread clientReceiveThread;
+    private string delimiter = "~";
     public static Client instance { get; private set; }
 
     private void Awake()
@@ -96,7 +97,7 @@ public class Client : MonoBehaviour
             NetworkStream stream = socket.GetStream();
             if (stream.CanWrite)
             {
-                byte[] clientMessageAsByteArray = Encoding.ASCII.GetBytes(data);
+                byte[] clientMessageAsByteArray = Encoding.ASCII.GetBytes(data+delimiter);
 
 
                 stream.Write(clientMessageAsByteArray, 0, clientMessageAsByteArray.Length);

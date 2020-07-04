@@ -73,8 +73,9 @@ public class Client : MonoBehaviour
                         var incomingData = new byte[length];
                         Array.Copy(bytes, 0, incomingData, 0, length);
 
+                        
                         string serverMessage = Encoding.ASCII.GetString(incomingData);
-                        Debug.Log("server message received as: " + serverMessage);
+                        handleIncomingData(serverMessage);
                     }
                 }
             }
@@ -101,7 +102,7 @@ public class Client : MonoBehaviour
 
 
                 stream.Write(clientMessageAsByteArray, 0, clientMessageAsByteArray.Length);
-                Debug.Log("Client sent his message - should be received by server");
+                // Debug.Log("Client sent his message - should be received by server");
                 stream.Flush();
             }
         }
@@ -110,29 +111,28 @@ public class Client : MonoBehaviour
             Debug.Log("Socket exception: " + socketException);
         }
     }
-    /*
-    public void SendEnemyData(string data)
+
+    void handleIncomingData(string message)
     {
-        if (socket == null)
+        string[] dataToHandle = message.Split('|');
+
+        
+        if (dataToHandle[0] == "PLAYER")
         {
-            return;
-        }
-        try
-        {
-            NetworkStream stream = socket.GetStream();
-            if (stream.CanWrite)
+
+            if (dataToHandle[1] == "rHEALTH")
             {
-                byte[] clientMessageAsByteArray = Encoding.ASCII.GetBytes(data);
-
-
-                stream.Write(clientMessageAsByteArray, 0, clientMessageAsByteArray.Length);
-                Debug.Log("Client sent his message - should be received by server");
-                stream.Flush();
+                int damageTaken = 0;
+                Debug.Log("Test: " +  dataToHandle[2] + " fin de test");
+                if (Int32.TryParse(dataToHandle[2], out damageTaken))
+                {
+                    int suma = damageTaken + damageTaken;
+                }
+                else
+                {
+                    Debug.Log("Error in message received");
+                }
             }
         }
-        catch (SocketException socketException)
-        {
-            Debug.Log("Socket exception: " + socketException);
-        }
-    }*/
+    }
 }

@@ -94,14 +94,21 @@ void Server::readMessage(std::string message){
 
             std::cout << "Player should take " << damageReceived << " damage. BANZAI" << std::endl;
             // TO-DO
-            // * Realizar accion sobre jugador y enviar resultado
+            // * Realizar accion sobre jugador
+
+            // * Enviar resultado
+            std::string dR = std::to_string(damageReceived);
+            std::string newMessage = "PLAYER|rHEALTH|"+dR;
+
+            sendMessage(newMessage);
 
         } else if (message.substr(0,message.find(delimiter)) == "ENEMY"){
             message = message.substr(message.find(delimiter)+1,message.size()-1);
 
             // TO-DO
             // * Verificar tipo de peticion (Jugador ubicado, vida, etc...)
-            // * Realizar accion sobre enemigo y enviar resultado
+            // * Realizar accion sobre enemigo
+            // * Enviar resultado
         }
 
     }
@@ -112,8 +119,8 @@ void Server::readMessage(std::string message){
  * recibida
  * @param message - mensaje a enviar por sockets
  */
-void Server::sendMessage(char message[]) {
-    iSendResult = send(ClientSocket, message, iRecvResult, 0);
+void Server::sendMessage(std::string message) {
+    iSendResult = send(ClientSocket, message.c_str(), message.length(), 0);
     if (iSendResult == SOCKET_ERROR) {
         closesocket(ClientSocket);
         WSACleanup();

@@ -20,7 +20,7 @@ public:
     int init();
     int run();
     void readMessage(std::string message);
-    void sendMessage(char message[]);
+    void sendMessage(std::string message);
     void readBuffer(std::string buffer);
 
 private:

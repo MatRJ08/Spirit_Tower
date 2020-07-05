@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,12 +22,16 @@ public class Player_Movement : MonoBehaviour
 
     private void Update()
     {
+        
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
-
+        
+        
+        Client.instance.SendData("UPDATE|PLAYER|X:" + Math.Round(transform.position.x) + ",Y:" + Math.Round(transform.position.y) + ";HP:"+ Math.Round(GetComponent<recieve_Damage>().health));
+        
     }
 
     private void FixedUpdate()

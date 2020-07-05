@@ -74,6 +74,7 @@ public class Enemy_Attack : MonoBehaviour
         Debug.Log("health " + currentHealth);
         if (currentHealth < 0)
         {
+            Destroy(fieldOfView);
             Destroy(gameObject);
         }
     }

@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/AdrCh/Documents/GitHub/Spirit_Tower/SpiritTower/src/server.cpp
+server.h
+C:/Users/AdrCh/Documents/GitHub/Spirit_Tower/SpiritTower/src/server.h
+
+C:/Users/AdrCh/Documents/GitHub/Spirit_Tower/SpiritTower/src/server.h
+WS2tcpip.h
+-
+stdio.h
+-
+iostream
+-
+string
+-
+

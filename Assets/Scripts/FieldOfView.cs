@@ -107,4 +107,9 @@ public class FieldOfView : MonoBehaviour
     {
         viewDistance = newViewDistance;
     }
+
+    public void OnDestroy()
+    {
+        Destroy(mesh);
+    }
 }

@@ -19,7 +19,7 @@ public class Enemy_Attack : MonoBehaviour
     [SerializeField] private float viewDistance;
     private FieldOfView fieldOfView;
     private Enemy_Patrol Patrol;
-
+    public bool isIn = false;
     Vector3 aimDir;
     void Start()
     {
@@ -33,13 +33,14 @@ public class Enemy_Attack : MonoBehaviour
     }
     void Update()
     {
-
         aimDir = Patrol.GetAimDir();
         fieldOfView.SetOrigin(transform.position);
         fieldOfView.SetAimDirection(aimDir);
 
         if (Mathf.Abs(Player.transform.position.x - transform.position.x) < viewDistance && Mathf.Abs(Player.transform.position.y - transform.position.y) < viewDistance)
         {
+
+           
             //Debug.Log(Player.transform.position.x - transform.position.x);
             Vector2 dirToPlayer = (Player.transform.position - transform.position).normalized;
 
@@ -47,6 +48,7 @@ public class Enemy_Attack : MonoBehaviour
             float angle = Vector2.Angle(aimDir, dirToPlayer);
             if (angle < fov / 2f)
             {
+                isIn = true;
                 //Debug.Log(angle);
                 if (shootTime <= 0)
                 {
@@ -55,7 +57,7 @@ public class Enemy_Attack : MonoBehaviour
                     Vector2 enemyPos = transform.position;
                     Vector2 direction = dirToPlayer;
                     arrow.GetComponent<Rigidbody2D>().velocity = direction * projectileSpeed;
-                    arrow.GetComponent<Damage>().damage = Random.Range(minDamage, maxDamage);
+                    arrow.GetComponent<Damage>().damage = 0;//Random.Range(minDamage, maxDamage);
                     shootTime = startShootTime;
                 }
                 else
@@ -63,7 +65,17 @@ public class Enemy_Attack : MonoBehaviour
                     shootTime -= Time.deltaTime;
                 }
             }
+            else
+            {
+                isIn = false;
+            }
         }
+        else
+        {
+            isIn = false;
+        }
+
+        
 
     }
 

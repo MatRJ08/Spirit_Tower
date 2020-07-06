@@ -9,6 +9,9 @@ public class Player_Attack : MonoBehaviour
     public LayerMask enemyLayers;
     public int attackDamage = 10;
     public Animator animator;
+  
+    public Transform[] enemies;
+    private Collider2D[] hitEnemies;
 
     void Update()
     {
@@ -20,14 +23,25 @@ public class Player_Attack : MonoBehaviour
     }
     void Attack()
     {
+       
         animator.SetTrigger("Attack");
 
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+        hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<Enemy_Attack>().TakeDamage(attackDamage);
+            print(enemy.name + " IS IN: " + enemy.GetComponent<Enemy_Attack>().isIn);
+            if (enemy.GetComponent<Enemy_Attack>().isIn)
+            {
+                
+                enemy.GetComponent<Enemy_Attack>().TakeDamage(attackDamage);
+            }
+            else
+            {
+                enemy.GetComponent<Enemy_Attack>().TakeDamage(enemy.GetComponent<Enemy_Attack>().maxHealth);
+            }
         }
     }
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);

@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Enemy_Attack : MonoBehaviour
 {
+    public Transform EnemyInstaKill;
+    private float EIKRange = 0.9f;
     public int maxHealth = 100;
     private int currentHealth;
     public GameObject Player;
@@ -28,6 +30,7 @@ public class Enemy_Attack : MonoBehaviour
         fieldOfView = Instantiate(pfFieldOfView, null).GetComponent<FieldOfView>();
         fieldOfView.SetFov(fov);
         fieldOfView.SetViewDistance(viewDistance);
+
         Patrol = GetComponent<Enemy_Patrol>();
 
     }
@@ -37,18 +40,40 @@ public class Enemy_Attack : MonoBehaviour
         fieldOfView.SetOrigin(transform.position);
         fieldOfView.SetAimDirection(aimDir);
 
+      
         if (Mathf.Abs(Player.transform.position.x - transform.position.x) < viewDistance && Mathf.Abs(Player.transform.position.y - transform.position.y) < viewDistance)
         {
-
-           
-            //Debug.Log(Player.transform.position.x - transform.position.x);
+            Collider2D[] hit = Physics2D.OverlapCircleAll(EnemyInstaKill.position, EIKRange);
             Vector2 dirToPlayer = (Player.transform.position - transform.position).normalized;
+            float weakAngle = Vector2.Angle(-aimDir, dirToPlayer);
+            foreach (Collider2D jugador in hit)
+            {
+                if (jugador.name == "PlayerSprite")
+                {
+                    print("IN BEHIND ");
+                    if (weakAngle < fov / 2f) { isIn = true; } else { isIn = false; }
+                }
+            }
+            //Debug.Log(Player.transform.position.x - transform.position.x);
+            
 
             //Debug.Log(fov/2f);
+            
             float angle = Vector2.Angle(aimDir, dirToPlayer);
             if (angle < fov / 2f)
             {
-                isIn = true;
+                
+
+                
+                foreach(Collider2D jugador in hit)
+                {
+                    if (jugador.name == "PlayerSprite")
+                    {
+                        Player.GetComponent<recieve_Damage>().DealDamage(Player.GetComponent<recieve_Damage>().maxHealth);
+                        print("INSTAKILL ");
+                    }
+                }
+
                 //Debug.Log(angle);
                 if (shootTime <= 0)
                 {
@@ -57,17 +82,13 @@ public class Enemy_Attack : MonoBehaviour
                     Vector2 enemyPos = transform.position;
                     Vector2 direction = dirToPlayer;
                     arrow.GetComponent<Rigidbody2D>().velocity = direction * projectileSpeed;
-                    arrow.GetComponent<Damage>().damage = 0;//Random.Range(minDamage, maxDamage);
+                    arrow.GetComponent<Damage>().damage = Random.Range(minDamage, maxDamage);
                     shootTime = startShootTime;
                 }
                 else
                 {
                     shootTime -= Time.deltaTime;
                 }
-            }
-            else
-            {
-                isIn = false;
             }
         }
         else
@@ -89,5 +110,9 @@ public class Enemy_Attack : MonoBehaviour
             Destroy(fieldOfView);
             Destroy(gameObject);
         }
+    }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(EnemyInstaKill.position, EIKRange);
     }
 }

@@ -30,7 +30,7 @@ public class Player_Movement : MonoBehaviour
         animator.SetFloat("Speed", movement.sqrMagnitude);
         
         
-        Client.instance.SendData("UPDATE|PLAYER|X:" + Math.Round(transform.position.x) + ",Y:" + Math.Round(transform.position.y) + ";HP:"+ Math.Round(GetComponent<recieve_Damage>().health));
+        //Client.instance.SendData("UPDATE|PLAYER|X:" + Math.Round(transform.position.x) + ",Y:" + Math.Round(transform.position.y) + ";HP:"+ Math.Round(GetComponent<recieve_Damage>().health));
         
     }
 

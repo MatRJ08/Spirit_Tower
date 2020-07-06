@@ -27,17 +27,16 @@ public class Player_Attack : MonoBehaviour
         animator.SetTrigger("Attack");
 
         hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+        
         foreach (Collider2D enemy in hitEnemies)
         {
-            print(enemy.name + " IS IN: " + enemy.GetComponent<Enemy_Attack>().isIn);
+           
             if (enemy.GetComponent<Enemy_Attack>().isIn)
             {
-                
-                enemy.GetComponent<Enemy_Attack>().TakeDamage(attackDamage);
-            }
+                enemy.GetComponent<Enemy_Attack>().TakeDamage(enemy.GetComponent<Enemy_Attack>().maxHealth*2);            }
             else
             {
-                enemy.GetComponent<Enemy_Attack>().TakeDamage(enemy.GetComponent<Enemy_Attack>().maxHealth);
+                enemy.GetComponent<Enemy_Attack>().TakeDamage(attackDamage);
             }
         }
     }

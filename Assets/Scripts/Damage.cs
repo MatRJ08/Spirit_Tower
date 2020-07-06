@@ -8,9 +8,10 @@ public class Damage : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
+        
         if (collision.name == "PlayerSprite")
         {
+            print(collision.name);
             collision.GetComponent<recieve_Damage>().DealDamage(damage);
             Destroy(gameObject);
         }

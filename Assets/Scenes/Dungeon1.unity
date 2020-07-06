@@ -285,6 +285,7 @@ MonoBehaviour:
     type: 3}
   fov: 90
   viewDistance: 5
+  isIn: 0
 --- !u!61 &163110212
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -891,7 +892,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -35, y: -44.25}
+  m_AnchoredPosition: {x: -105.9, y: -105}
   m_SizeDelta: {x: 208, y: 208}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &500368903
@@ -107332,6 +107333,7 @@ GameObject:
   - component: {fileID: 1261232071}
   - component: {fileID: 1261232070}
   - component: {fileID: 1261232069}
+  - component: {fileID: 1261232073}
   m_Layer: 9
   m_Name: Gray_Enemy2
   m_TagString: Untagged
@@ -107363,6 +107365,7 @@ MonoBehaviour:
     type: 3}
   fov: 90
   viewDistance: 5
+  isIn: 0
 --- !u!114 &1261232070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107446,6 +107449,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1261232073
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261232068}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.2700996, y: 0.1695457}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.4375, y: 1.125}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.8973007, y: 0.7859087}
+  m_EdgeRadius: 0
 --- !u!1 &1270491226
 GameObject:
   m_ObjectHideFlags: 0
@@ -108926,8 +108955,6 @@ MonoBehaviour:
     m_Bits: 512
   attackDamage: 10
   animator: {fileID: 1702154079}
-  pfFieldOfView: {fileID: 8425128754498616362, guid: 53efc9cc64e53a94eae317488903b0e7,
-    type: 3}
   enemies: []
 --- !u!1 &1717692429
 GameObject:
@@ -109249,6 +109276,7 @@ GameObject:
   - component: {fileID: 1912597599}
   - component: {fileID: 1912597598}
   - component: {fileID: 1912597597}
+  - component: {fileID: 1912597601}
   m_Layer: 9
   m_Name: Gray_Enemy3
   m_TagString: Untagged
@@ -109280,6 +109308,7 @@ MonoBehaviour:
     type: 3}
   fov: 120
   viewDistance: 8
+  isIn: 0
 --- !u!114 &1912597598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109363,6 +109392,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1912597601
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912597596}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.2700996, y: 0.1695457}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.4375, y: 1.125}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.8973007, y: 0.7859087}
+  m_EdgeRadius: 0
 --- !u!1001 &1914910504
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -109611,7 +109666,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2058094550}
   - component: {fileID: 2058094549}
-  - component: {fileID: 2058094548}
   m_Layer: 0
   m_Name: MiniMapCam
   m_TagString: Untagged
@@ -109619,18 +109673,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2058094548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2058094547}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30064d5701ae4ac41a2d44bd91aa5f63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!20 &2058094549
 Camera:
   m_ObjectHideFlags: 0

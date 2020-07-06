@@ -56,8 +56,8 @@ public class Enemy_Attack : MonoBehaviour
                     Vector2 playerPos = Player.transform.position;
                     Vector2 enemyPos = transform.position;
                     Vector2 direction = dirToPlayer;
+                    arrow.GetComponent<Damage>().damage = Random.Range(minDamage, maxDamage);
                     arrow.GetComponent<Rigidbody2D>().velocity = direction * projectileSpeed;
-                    arrow.GetComponent<Damage>().damage = 0;//Random.Range(minDamage, maxDamage);
                     shootTime = startShootTime;
                 }
                 else

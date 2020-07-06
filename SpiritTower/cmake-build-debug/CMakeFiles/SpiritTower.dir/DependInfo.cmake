@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/AdrCh/Documents/GitHub/Spirit_Tower/SpiritTower/src/main.cpp" "C:/Users/AdrCh/Documents/GitHub/Spirit_Tower/SpiritTower/cmake-build-debug/CMakeFiles/SpiritTower.dir/src/main.cpp.obj"
-  "C:/Users/AdrCh/Documents/GitHub/Spirit_Tower/SpiritTower/src/server.cpp" "C:/Users/AdrCh/Documents/GitHub/Spirit_Tower/SpiritTower/cmake-build-debug/CMakeFiles/SpiritTower.dir/src/server.cpp.obj"
+  "C:/Users/Keons/New Unity Project/Spirit_Tower/SpiritTower/src/main.cpp" "C:/Users/Keons/New Unity Project/Spirit_Tower/SpiritTower/cmake-build-debug/CMakeFiles/SpiritTower.dir/src/main.cpp.obj"
+  "C:/Users/Keons/New Unity Project/Spirit_Tower/SpiritTower/src/server.cpp" "C:/Users/Keons/New Unity Project/Spirit_Tower/SpiritTower/cmake-build-debug/CMakeFiles/SpiritTower.dir/src/server.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")
 

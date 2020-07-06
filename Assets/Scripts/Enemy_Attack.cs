@@ -50,7 +50,7 @@ public class Enemy_Attack : MonoBehaviour
             {
                 if (jugador.name == "PlayerSprite")
                 {
-                    print("IN BEHIND ");
+                   
                     if (weakAngle < fov / 2f) { isIn = true; } else { isIn = false; }
                 }
             }
@@ -81,8 +81,11 @@ public class Enemy_Attack : MonoBehaviour
                     Vector2 playerPos = Player.transform.position;
                     Vector2 enemyPos = transform.position;
                     Vector2 direction = dirToPlayer;
-                    arrow.GetComponent<Rigidbody2D>().velocity = direction * projectileSpeed;
                     arrow.GetComponent<Damage>().damage = Random.Range(minDamage, maxDamage);
+                    arrow.GetComponent<Rigidbody2D>().velocity = direction * projectileSpeed;
+
+                    arrow.GetComponent<Damage>().damage = Random.Range(minDamage, maxDamage);
+
                     shootTime = startShootTime;
                 }
                 else

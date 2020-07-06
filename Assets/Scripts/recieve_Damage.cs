@@ -15,8 +15,13 @@ public class recieve_Damage : MonoBehaviour
     }
     public void DealDamage(float damage)
     {
+
        //print("damage: " + damage);
         //Client.instance.SendData("REQUEST|PLAYER|DAMAGE:" + Math.Round(damage));
+
+       
+       // Client.instance.SendData("REQUEST|PLAYER|DAMAGE:" + Math.Round(damage));
+
         health -= damage;
         CheckDeath();
     }

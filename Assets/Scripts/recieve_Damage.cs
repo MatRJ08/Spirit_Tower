@@ -29,7 +29,7 @@ public class recieve_Damage : MonoBehaviour
     public void DealDamage(float damage)
     {
         // Client.instance.SendData("REQUEST|PLAYER|DAMAGE:" + Math.Round(damage));
-
+        print("NUMERO DANO  "+numHearts);
         health -= damage;
         CheckDeath();
     }
@@ -65,19 +65,19 @@ public class recieve_Damage : MonoBehaviour
             print("NUM death: " + numHearts);
             if (numHearts == 0)
             {
+                CangeHearts();
                 print("DEST");
                 Destroy(gameObject);
             }
             else
             {                
-                CangeHearts();
-                ResetEnemies();
-                //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                
                 movePoint.position=InitPos;
                 Player.position = InitPos;
-
-               // print("POS death: " + movePos.position);
                 health = maxHealth;
+                CangeHearts();
+                ResetEnemies();
+                print("RESPAWN");
                 
             }
         }

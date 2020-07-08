@@ -8,6 +8,7 @@ public class Enemy_Attack : MonoBehaviour
     public Transform EnemyInstaKill;
     private float EIKRange = 0.9f;
     public int maxHealth = 100;
+    private Object enemyRef;
     public int currentHealth;
     public GameObject Player;
     public GameObject projectile;
@@ -25,6 +26,8 @@ public class Enemy_Attack : MonoBehaviour
     Vector3 aimDir;
     void Start()
     {
+        enemyRef = Resources.Load("Gray_Enemy1");
+
         currentHealth = maxHealth;
         shootTime = startShootTime;
         fieldOfView = Instantiate(pfFieldOfView, null).GetComponent<FieldOfView>();
@@ -50,21 +53,13 @@ public class Enemy_Attack : MonoBehaviour
             {
                 if (jugador.name == "PlayerSprite")
                 {
-                   
                     if (weakAngle < fov / 2f) { isIn = true; } else { isIn = false; }
                 }
             }
-            //Debug.Log(Player.transform.position.x - transform.position.x);
-            
-
-            //Debug.Log(fov/2f);
             
             float angle = Vector2.Angle(aimDir, dirToPlayer);
             if (angle < fov / 2f)
             {
-                
-
-                
                 foreach(Collider2D jugador in hit)
                 {
                     if (jugador.name == "PlayerSprite")
@@ -98,21 +93,25 @@ public class Enemy_Attack : MonoBehaviour
         {
             isIn = false;
         }
-
-        
-
     }
-
     public void TakeDamage(int damage)
     {
-        Debug.Log("damage: " + damage);
         currentHealth -= damage;
-        Debug.Log("health " + currentHealth);
         if (currentHealth < 0)
         {
-            Destroy(fieldOfView);
-            Destroy(gameObject);
+            GetComponent<SpriteRenderer>().enabled = false;
+            Invoke("Respawn",5);
+
+
+            /*Destroy(fieldOfView);
+            Destroy(gameObject);*/
         }
+    }
+    void Respawn()
+    {
+        GameObject enemyClone = (GameObject)Instantiate(enemyRef);
+        enemyClone.transform.position = transform.position;
+        Destroy(gameObject);
     }
     private void OnDrawGizmosSelected()
     {

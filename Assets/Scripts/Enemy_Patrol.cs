@@ -26,12 +26,8 @@ public class Enemy_Patrol : MonoBehaviour
 
     void Update()
     {
-
-
         transform.position = Vector2.MoveTowards(transform.position, moveSpots[spot].position, speed * Time.deltaTime);//Posiciona el enemigo en el punto
         
-
-
         if (Vector2.Distance(transform.position,moveSpots[spot].position)<0.2f)// verifica que haya llegado
         {
             if (waitTime<=0)//Verifica que sea tiempo de moverse

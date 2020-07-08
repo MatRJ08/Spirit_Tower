@@ -10,7 +10,7 @@ public class Player_Attack : MonoBehaviour
     public int attackDamage = 10;
     public Animator animator;
   
-    public Transform[] enemies;
+    
     private Collider2D[] hitEnemies;
 
     void Update()

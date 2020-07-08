@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -276,6 +276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyInstaKill: {fileID: 1818034627}
   maxHealth: 50
+  currentHealth: 0
   Player: {fileID: 1702154074}
   projectile: {fileID: 5311747824286472439, guid: fed2a01e3e0b6c4489c5d5bb2f216aaa,
     type: 3}
@@ -896,36 +897,6 @@ Transform:
   - {fileID: 126071501}
   m_Father: {fileID: 0}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &484492482
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 484492483}
-  m_Layer: 9
-  m_Name: EnemyInstaKill
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &484492483
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 484492482}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 23, y: 27, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1912597600}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &500368901
 GameObject:
@@ -105380,36 +105351,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &579235548
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 579235549}
-  m_Layer: 9
-  m_Name: EnemyInstaKill
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &579235549
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 579235548}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15, y: 18, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1261232072}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &606548704
 GameObject:
   m_ObjectHideFlags: 0
@@ -106646,6 +106587,36 @@ Transform:
   m_Father: {fileID: 464478776}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &950254422
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 950254423}
+  m_Layer: 9
+  m_Name: EnemyInstaKill3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &950254423
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950254422}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1912597600}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1059051553
 GameObject:
   m_ObjectHideFlags: 0
@@ -107552,8 +107523,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51a82d5a01f4c004a9738e7861005891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyInstaKill: {fileID: 579235549}
+  EnemyInstaKill: {fileID: 1941286329}
   maxHealth: 100
+  currentHealth: 0
   Player: {fileID: 1702154074}
   projectile: {fileID: 5311747824286472439, guid: fed2a01e3e0b6c4489c5d5bb2f216aaa,
     type: 3}
@@ -107646,7 +107618,7 @@ Transform:
   m_LocalPosition: {x: 40, y: 46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 579235549}
+  - {fileID: 1941286329}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -109361,6 +109333,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c73fa07fe2540b4ba07460f55c469d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 1702154076}
+  movePoint: {fileID: 1563865216}
   enemies:
   - {fileID: 163110210}
   - {fileID: 1261232072}
@@ -109420,7 +109394,6 @@ MonoBehaviour:
     m_Bits: 512
   attackDamage: 10
   animator: {fileID: 1702154079}
-  enemies: []
 --- !u!1 &1717692429
 GameObject:
   m_ObjectHideFlags: 0
@@ -109791,8 +109764,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51a82d5a01f4c004a9738e7861005891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyInstaKill: {fileID: 484492483}
+  EnemyInstaKill: {fileID: 950254423}
   maxHealth: 100
+  currentHealth: 0
   Player: {fileID: 1702154074}
   projectile: {fileID: 5311747824286472439, guid: fed2a01e3e0b6c4489c5d5bb2f216aaa,
     type: 3}
@@ -109885,7 +109859,7 @@ Transform:
   m_LocalPosition: {x: 32, y: 37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 484492483}
+  - {fileID: 950254423}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -110157,6 +110131,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1914910504}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1941286328
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1941286329}
+  m_Layer: 9
+  m_Name: EnemyInstaKill2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1941286329
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941286328}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1261232072}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2038341011 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4847440508122002117, guid: 111138cc47e512e4c93fec921e3d46b5,

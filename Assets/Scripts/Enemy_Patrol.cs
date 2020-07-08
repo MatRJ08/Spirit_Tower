@@ -10,7 +10,7 @@ public class Enemy_Patrol : MonoBehaviour
     public float startWaitTime; //Tiempo maximo de espera
     public Transform[] moveSpots;// Lista de puntos de vigilancia 
     private int spot; //Iterador de la lista
-    public Transform Player;
+    private Transform Player;
     private Vector3 lastMoveDir;
     private Vector3 spotDir;
 
@@ -21,6 +21,7 @@ public class Enemy_Patrol : MonoBehaviour
         waitTime = startWaitTime;
         spotDir = (moveSpots[spot].position - transform.position).normalized;
         lastMoveDir = spotDir;
+        Player = GameObject.Find("PlayerSprite").transform;
     }
 
 

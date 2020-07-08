@@ -8,9 +8,10 @@ public class Enemy_Attack : MonoBehaviour
     public Transform EnemyInstaKill;
     private float EIKRange = 0.9f;
     public int maxHealth = 100;
-    private Object enemyRef;
+    [SerializeField] private string enemyRefName;
+    [SerializeField] private Object enemyRef;
     public int currentHealth;
-    public GameObject Player;
+    private GameObject Player;
     public GameObject projectile;
     public float minDamage;
     public float maxDamage;
@@ -26,8 +27,9 @@ public class Enemy_Attack : MonoBehaviour
     Vector3 aimDir;
     void Start()
     {
-        enemyRef = Resources.Load("Gray_Enemy1");
-
+        //enemyRef = Resources.Load("Dungeon1/Gray_Enemy1");
+        enemyRef = Resources.Load(enemyRefName);
+        Player = GameObject.Find("PlayerSprite");
         currentHealth = maxHealth;
         shootTime = startShootTime;
         fieldOfView = Instantiate(pfFieldOfView, null).GetComponent<FieldOfView>();
@@ -99,7 +101,8 @@ public class Enemy_Attack : MonoBehaviour
         currentHealth -= damage;
         if (currentHealth < 0)
         {
-            GetComponent<SpriteRenderer>().enabled = false;
+            gameObject.SetActive(false);
+            Destroy(fieldOfView);
             Invoke("Respawn",5);
 
 

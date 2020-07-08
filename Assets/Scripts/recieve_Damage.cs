@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class recieve_Damage : MonoBehaviour
 {
+    public Transform Player;
+    public Transform movePoint;
     public Transform[] enemies;
     public float health;
     public float maxHealth;
@@ -14,29 +16,18 @@ public class recieve_Damage : MonoBehaviour
     public Image[] hearts;
     public Sprite full;
     public Sprite empty;
+    private Vector3 InitPos;
 
     void Start()
     {
-        print("NUM start: " + numHearts);
+        movePoint.parent = null;
+        InitPos = Player.position;
+
         health = maxHealth;
     }
    
     public void DealDamage(float damage)
     {
-        
-     
-        for (int i = 0; i <numHearts; i++)
-        {
-            if (i < numHearts)
-            {
-                hearts[i].enabled = true;
-            }
-            else
-            {
-                hearts[i].enabled = false;
-            }
-        }
-
         // Client.instance.SendData("REQUEST|PLAYER|DAMAGE:" + Math.Round(damage));
 
         health -= damage;
@@ -47,6 +38,22 @@ public class recieve_Damage : MonoBehaviour
         if(health> maxHealth)
         {
             health = maxHealth;
+        }
+    }
+
+    void CangeHearts()
+    {
+        for (int i = 1; i < hearts.Length; i++)
+        {
+            if (i < numHearts)
+            {
+                hearts[i].sprite = full;
+            }
+            else
+            {
+                hearts[i].sprite = empty;
+            }
+            
         }
     }
 
@@ -62,15 +69,26 @@ public class recieve_Damage : MonoBehaviour
                 Destroy(gameObject);
             }
             else
-            {
-                print("SCENE");
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            {                
+                CangeHearts();
+                ResetEnemies();
+                //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                movePoint.position=InitPos;
+                Player.position = InitPos;
 
-               /* for (int i = 0; i < enemies.Length; i++)
-                {
-                    enemies[i].position=GetComponent
-                }*/
+               // print("POS death: " + movePos.position);
+                health = maxHealth;
+                
             }
+        }
+    }
+    void ResetEnemies()
+    {
+        for (int i = 0; i < enemies.Length; i++)
+        {
+            
+            enemies[i].position = enemies[i].GetComponent<Enemy_Patrol>().moveSpots[0].position;
+            enemies[i].GetComponent<Enemy_Attack>().currentHealth = enemies[i].GetComponent<Enemy_Attack>().maxHealth;
         }
     }
 }

@@ -8,7 +8,7 @@ public class Enemy_Attack : MonoBehaviour
     public Transform EnemyInstaKill;
     private float EIKRange = 0.9f;
     public int maxHealth = 100;
-    private int currentHealth;
+    public int currentHealth;
     public GameObject Player;
     public GameObject projectile;
     public float minDamage;

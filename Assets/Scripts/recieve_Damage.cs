@@ -9,7 +9,8 @@ public class recieve_Damage : MonoBehaviour
 {
     public Transform Player;
     public Transform movePoint;
-    public Transform[] enemies;
+    [SerializeField] private Transform[] enemies;
+    [SerializeField] private string[] enemiesRefName;
     public float health;
     public float maxHealth;
     private int numHearts= 5;
@@ -85,9 +86,22 @@ public class recieve_Damage : MonoBehaviour
     {
         for (int i = 0; i < enemies.Length; i++)
         {
-            
-            enemies[i].position = enemies[i].GetComponent<Enemy_Patrol>().moveSpots[0].position;
-            enemies[i].GetComponent<Enemy_Attack>().currentHealth = enemies[i].GetComponent<Enemy_Attack>().maxHealth;
+            if (enemies[i] == null)
+            {
+
+                UnityEngine.Object enemyRef = Resources.Load(enemiesRefName[i]);
+                GameObject enemyClone = (GameObject)Instantiate(enemyRef);
+                Enemy_Patrol patrol = enemyClone.GetComponent<Enemy_Patrol>();
+                enemyClone.transform.position = patrol.moveSpots[0].position;
+                enemies[i] = enemyClone.transform;
+            }
+            else
+            {
+                
+                Enemy_Patrol patrol = enemies[i].GetComponent<Enemy_Patrol>();
+                enemies[i].transform.position = patrol.moveSpots[0].position;
+
+            }
         }
     }
 }

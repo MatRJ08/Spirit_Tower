@@ -29,7 +29,6 @@ public class recieve_Damage : MonoBehaviour
     public void DealDamage(float damage)
     {
         // Client.instance.SendData("REQUEST|PLAYER|DAMAGE:" + Math.Round(damage));
-        print("NUMERO DANO  "+numHearts);
         health -= damage;
         CheckDeath();
     }
@@ -61,8 +60,8 @@ public class recieve_Damage : MonoBehaviour
     {
         if (health <= 0)
         {
+            health = 0;
             numHearts -= 1;
-            print("NUM death: " + numHearts);
             if (numHearts == 0)
             {
                 CangeHearts();

@@ -45,6 +45,10 @@ public class Enemy_Attack : MonoBehaviour
         fieldOfView.SetOrigin(transform.position);
         fieldOfView.SetAimDirection(aimDir);
 
+        if (Player.GetComponent<recieve_Damage>().health<=0)
+        {
+            TakeDamage(maxHealth, true);
+        }
       
         if (Mathf.Abs(Player.transform.position.x - transform.position.x) < viewDistance && Mathf.Abs(Player.transform.position.y - transform.position.y) < viewDistance)
         {
@@ -96,18 +100,22 @@ public class Enemy_Attack : MonoBehaviour
             isIn = false;
         }
     }
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, bool b)
     {
         currentHealth -= damage;
         if (currentHealth < 0)
         {
             gameObject.SetActive(false);
             Destroy(fieldOfView);
-            Invoke("Respawn",5);
+            if (b)
+            {
+                Respawn();
+            }
+            
 
 
-            /*Destroy(fieldOfView);
-            Destroy(gameObject);*/
+            Destroy(fieldOfView);
+            Destroy(gameObject);
         }
     }
     void Respawn()

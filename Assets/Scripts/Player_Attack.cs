@@ -33,10 +33,10 @@ public class Player_Attack : MonoBehaviour
            
             if (enemy.GetComponent<Enemy_Attack>().isIn)
             {
-                enemy.GetComponent<Enemy_Attack>().TakeDamage(enemy.GetComponent<Enemy_Attack>().maxHealth*2);            }
+                enemy.GetComponent<Enemy_Attack>().TakeDamage(enemy.GetComponent<Enemy_Attack>().maxHealth*2,false);            }
             else
             {
-                enemy.GetComponent<Enemy_Attack>().TakeDamage(attackDamage);
+                enemy.GetComponent<Enemy_Attack>().TakeDamage(attackDamage,false);
             }
         }
     }

@@ -44,10 +44,10 @@ RM = "C:\Program Files\JetBrains\CLion 2020.1.2\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower"
+CMAKE_SOURCE_DIR = C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower\cmake-build-debug"
+CMAKE_BINARY_DIR = C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles\SpiritTower.dir\depend.make
@@ -60,57 +60,120 @@ include CMakeFiles\SpiritTower.dir\flags.make
 
 CMakeFiles\SpiritTower.dir\src\server.cpp.obj: CMakeFiles\SpiritTower.dir\flags.make
 CMakeFiles\SpiritTower.dir\src\server.cpp.obj: ..\src\server.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SpiritTower.dir/src/server.cpp.obj"
-	C:\PROGRA~2\MICROS~1\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\SpiritTower.dir\src\server.cpp.obj /FdCMakeFiles\SpiritTower.dir\ /FS -c "C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower\src\server.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SpiritTower.dir/src/server.cpp.obj"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\SpiritTower.dir\src\server.cpp.obj /FdCMakeFiles\SpiritTower.dir\ /FS -c C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower\src\server.cpp
 <<
 
 CMakeFiles\SpiritTower.dir\src\server.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpiritTower.dir/src/server.cpp.i"
-	C:\PROGRA~2\MICROS~1\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe > CMakeFiles\SpiritTower.dir\src\server.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower\src\server.cpp"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\SpiritTower.dir\src\server.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower\src\server.cpp
 <<
 
 CMakeFiles\SpiritTower.dir\src\server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpiritTower.dir/src/server.cpp.s"
-	C:\PROGRA~2\MICROS~1\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\SpiritTower.dir\src\server.cpp.s /c "C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower\src\server.cpp"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\SpiritTower.dir\src\server.cpp.s /c C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower\src\server.cpp
 <<
 
 CMakeFiles\SpiritTower.dir\src\main.cpp.obj: CMakeFiles\SpiritTower.dir\flags.make
 CMakeFiles\SpiritTower.dir\src\main.cpp.obj: ..\src\main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SpiritTower.dir/src/main.cpp.obj"
-	C:\PROGRA~2\MICROS~1\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\SpiritTower.dir\src\main.cpp.obj /FdCMakeFiles\SpiritTower.dir\ /FS -c "C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower\src\main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SpiritTower.dir/src/main.cpp.obj"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\SpiritTower.dir\src\main.cpp.obj /FdCMakeFiles\SpiritTower.dir\ /FS -c C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower\src\main.cpp
 <<
 
 CMakeFiles\SpiritTower.dir\src\main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpiritTower.dir/src/main.cpp.i"
-	C:\PROGRA~2\MICROS~1\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe > CMakeFiles\SpiritTower.dir\src\main.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower\src\main.cpp"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\SpiritTower.dir\src\main.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower\src\main.cpp
 <<
 
 CMakeFiles\SpiritTower.dir\src\main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpiritTower.dir/src/main.cpp.s"
-	C:\PROGRA~2\MICROS~1\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\SpiritTower.dir\src\main.cpp.s /c "C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower\src\main.cpp"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\SpiritTower.dir\src\main.cpp.s /c C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower\src\main.cpp
+<<
+
+CMakeFiles\SpiritTower.dir\src\controller.cpp.obj: CMakeFiles\SpiritTower.dir\flags.make
+CMakeFiles\SpiritTower.dir\src\controller.cpp.obj: ..\src\controller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SpiritTower.dir/src/controller.cpp.obj"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\SpiritTower.dir\src\controller.cpp.obj /FdCMakeFiles\SpiritTower.dir\ /FS -c C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower\src\controller.cpp
+<<
+
+CMakeFiles\SpiritTower.dir\src\controller.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpiritTower.dir/src/controller.cpp.i"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\SpiritTower.dir\src\controller.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower\src\controller.cpp
+<<
+
+CMakeFiles\SpiritTower.dir\src\controller.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpiritTower.dir/src/controller.cpp.s"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\SpiritTower.dir\src\controller.cpp.s /c C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower\src\controller.cpp
+<<
+
+CMakeFiles\SpiritTower.dir\src\Player.cpp.obj: CMakeFiles\SpiritTower.dir\flags.make
+CMakeFiles\SpiritTower.dir\src\Player.cpp.obj: ..\src\Player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/SpiritTower.dir/src/Player.cpp.obj"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\SpiritTower.dir\src\Player.cpp.obj /FdCMakeFiles\SpiritTower.dir\ /FS -c C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower\src\Player.cpp
+<<
+
+CMakeFiles\SpiritTower.dir\src\Player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpiritTower.dir/src/Player.cpp.i"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\SpiritTower.dir\src\Player.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower\src\Player.cpp
+<<
+
+CMakeFiles\SpiritTower.dir\src\Player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpiritTower.dir/src/Player.cpp.s"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\SpiritTower.dir\src\Player.cpp.s /c C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower\src\Player.cpp
+<<
+
+CMakeFiles\SpiritTower.dir\src\Specter.cpp.obj: CMakeFiles\SpiritTower.dir\flags.make
+CMakeFiles\SpiritTower.dir\src\Specter.cpp.obj: ..\src\Specter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/SpiritTower.dir/src/Specter.cpp.obj"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\SpiritTower.dir\src\Specter.cpp.obj /FdCMakeFiles\SpiritTower.dir\ /FS -c C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower\src\Specter.cpp
+<<
+
+CMakeFiles\SpiritTower.dir\src\Specter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpiritTower.dir/src/Specter.cpp.i"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\SpiritTower.dir\src\Specter.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower\src\Specter.cpp
+<<
+
+CMakeFiles\SpiritTower.dir\src\Specter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpiritTower.dir/src/Specter.cpp.s"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\SpiritTower.dir\src\Specter.cpp.s /c C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower\src\Specter.cpp
 <<
 
 # Object files for target SpiritTower
 SpiritTower_OBJECTS = \
 "CMakeFiles\SpiritTower.dir\src\server.cpp.obj" \
-"CMakeFiles\SpiritTower.dir\src\main.cpp.obj"
+"CMakeFiles\SpiritTower.dir\src\main.cpp.obj" \
+"CMakeFiles\SpiritTower.dir\src\controller.cpp.obj" \
+"CMakeFiles\SpiritTower.dir\src\Player.cpp.obj" \
+"CMakeFiles\SpiritTower.dir\src\Specter.cpp.obj"
 
 # External object files for target SpiritTower
 SpiritTower_EXTERNAL_OBJECTS =
 
 SpiritTower.exe: CMakeFiles\SpiritTower.dir\src\server.cpp.obj
 SpiritTower.exe: CMakeFiles\SpiritTower.dir\src\main.cpp.obj
+SpiritTower.exe: CMakeFiles\SpiritTower.dir\src\controller.cpp.obj
+SpiritTower.exe: CMakeFiles\SpiritTower.dir\src\Player.cpp.obj
+SpiritTower.exe: CMakeFiles\SpiritTower.dir\src\Specter.cpp.obj
 SpiritTower.exe: CMakeFiles\SpiritTower.dir\build.make
 SpiritTower.exe: CMakeFiles\SpiritTower.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable SpiritTower.exe"
-	"C:\Program Files\JetBrains\CLion 2020.1.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\SpiritTower.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100177~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100177~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\SpiritTower.dir\objects1.rsp @<<
- /out:SpiritTower.exe /implib:SpiritTower.lib /pdb:"C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower\cmake-build-debug\SpiritTower.pdb" /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable SpiritTower.exe"
+	"C:\Program Files\JetBrains\CLion 2020.1.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\SpiritTower.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\SpiritTower.dir\objects1.rsp @<<
+ /out:SpiritTower.exe /implib:SpiritTower.lib /pdb:C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower\cmake-build-debug\SpiritTower.pdb /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<
 
 # Rule to build all files generated by this target.
@@ -123,6 +186,6 @@ CMakeFiles\SpiritTower.dir\clean:
 .PHONY : CMakeFiles\SpiritTower.dir\clean
 
 CMakeFiles\SpiritTower.dir\depend:
-	$(CMAKE_COMMAND) -E cmake_depends "NMake Makefiles" "C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower" "C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower" "C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower\cmake-build-debug" "C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower\cmake-build-debug" "C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower\cmake-build-debug\CMakeFiles\SpiritTower.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "NMake Makefiles" C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower\cmake-build-debug C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower\cmake-build-debug C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower\cmake-build-debug\CMakeFiles\SpiritTower.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles\SpiritTower.dir\depend
 

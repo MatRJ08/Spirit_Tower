@@ -49,7 +49,7 @@ public class Enemy_Patrol : MonoBehaviour
             }
         }
 
-        //Client.instance.SendData("UPDATE|ENEMY|" + gameObject.name + "|X:" + Math.Round(transform.position.x) + ",Y:" + Math.Round(transform.position.y));
+        Client.instance.SendData("UPDATE|ENEMY|" + gameObject.name + "|X:" + Math.Round(transform.position.x) + ",Y:" + Math.Round(transform.position.y));
         
 
     }

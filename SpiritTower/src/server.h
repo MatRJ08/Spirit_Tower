@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <string>
+#include "controller.h"
 
 #pragma comment (lib, "Ws2_32.lib")
 
@@ -24,6 +25,7 @@ public:
     void readBuffer(std::string buffer);
 
 private:
+    GameController* game;
     static Server* instance;
     SOCKET ListenSocket = INVALID_SOCKET, ClientSocket = INVALID_SOCKET;
     char recvbuf[1024];

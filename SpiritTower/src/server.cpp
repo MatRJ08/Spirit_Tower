@@ -1,7 +1,8 @@
 #include "server.h"
-
+#include<stdlib.h>
 
 Server::Server(){
+    this->game = new GameController();
 }
 
 Server::~Server() {
@@ -52,12 +53,17 @@ void Server::readMessage(std::string message){
             std::string hp = message;
 
             int X = std::stoi(x.substr(x.find(":")+1,x.length()-1));
+            game->setPlayerX(X);
             int Y = std::stoi(y.substr(y.find(":")+1,y.length()-1));
+            game->setPlayerY(Y);
             int HP = std::stoi(hp.substr(hp.find(":")+1,hp.length()-1));
+            game->setPlayerHP(HP);
 
-            std::cout << "Player = " << "X: " << X << " - Y: " << Y << " - HP: " << HP << std::endl;
+            //std::cout << "Player = " << "X: " << X << " - Y: " << Y << " - HP: " << HP << std::endl;
+
             // TO-DO
             // Almacenar datos
+            std::cout << "Player = " << "X: " << game->getPlayerHP() << " - Y: " << game->getPlayerY() << " - HP: " << game->getPlayerHP() << std::endl;
 
 
         } else  if (message.substr(0,message.find(delimiter)) == "ENEMY"){
@@ -90,14 +96,17 @@ void Server::readMessage(std::string message){
         if (message.substr(0,message.find(delimiter)) == "PLAYER"){
             message = message.substr(message.find(delimiter)+1,message.size()-1);
 
-            int damageReceived = std::stoi(message.substr(message.find(":")+1));
+            //int damageReceived = std::stoi(message.substr(message.find(":")+1));
 
-            std::cout << "Player should take " << damageReceived << " damage. BANZAI" << std::endl;
+            //std::cout << "Player should take " << damageReceived << " damage. BANZAI" << std::endl;
             // TO-DO
             // * Realizar accion sobre jugador
+            int damage = 15;
+            game->reducePlayerHealth(damage);
 
+            std::cout << "Player should take " << damage << " damage. "  << "Player's new health is " << game->getPlayerHP() << ". BANZAI" << std::endl;
             // * Enviar resultado
-            std::string dR = std::to_string(damageReceived);
+            std::string dR = std::to_string(game->getPlayerHP());
             std::string newMessage = "PLAYER|rHEALTH|"+dR;
 
             sendMessage(newMessage);
@@ -149,6 +158,7 @@ void Server::readBuffer(std::string buffer) {
  * @return 0 si todo sale bien, 1 en caso de error
  */
 int Server::init(){
+
     WSADATA wsaData;
     iResult = WSAStartup(MAKEWORD(2,2), &wsaData);
     if (iResult != 0){
@@ -216,9 +226,7 @@ int Server::run(){
 
 
             readBuffer(recvbuf);
-            //printf("%s \n",recvbuf);
 
-            //SendMessage("Message received");
         } else if (iRecvResult == 0){
             printf("Connection closing...\n");
         } else {

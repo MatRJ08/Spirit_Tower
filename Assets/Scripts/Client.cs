@@ -8,9 +8,11 @@ using UnityEngine;
 
 public class Client : MonoBehaviour
 {
+    public GameObject player;
     private TcpClient socket;
     private Thread clientReceiveThread;
     private string delimiter = "~";
+    private LinkedList<string> incomingQueue = new LinkedList<string>();
     public static Client instance { get; private set; }
 
     private void Awake()
@@ -37,7 +39,7 @@ public class Client : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        handleIncomingData();
 
     }
 
@@ -75,7 +77,8 @@ public class Client : MonoBehaviour
 
                         
                         string serverMessage = Encoding.ASCII.GetString(incomingData);
-                        handleIncomingData(serverMessage);
+                        incomingQueue.Queue(serverMessage);
+                        //handleIncomingData(serverMessage);
                     }
                 }
             }
@@ -112,25 +115,35 @@ public class Client : MonoBehaviour
         }
     }
 
-    void handleIncomingData(string message)
+    void handleIncomingData()
     {
-        string[] dataToHandle = message.Split('|');
 
-        
-        if (dataToHandle[0] == "PLAYER")
+        if (incomingQueue.Peek() == null)
         {
+            return;
+        }
+        else
+        {
+            string message = incomingQueue.Pop();
 
-            if (dataToHandle[1] == "rHEALTH")
+            string[] dataToHandle = message.Split('|');
+
+
+            if (dataToHandle[0] == "PLAYER")
             {
-                int damageTaken = 0;
-                Debug.Log("Test: " +  dataToHandle[2] + " fin de test");
-                if (Int32.TryParse(dataToHandle[2], out damageTaken))
+
+                if (dataToHandle[1] == "rHEALTH")
                 {
-                    int suma = damageTaken + damageTaken;
-                }
-                else
-                {
-                    Debug.Log("Error in message received");
+                    int newHealth = 0;
+                    if (Int32.TryParse(dataToHandle[2], out newHealth))
+                    {
+                        Debug.Log("Damage taken, new health should be " + newHealth);
+                        player.GetComponent<recieve_Damage>().ReduceHealth(Convert.ToSingle(newHealth));
+                    }
+                    else
+                    {
+                        Debug.Log("Error in message received");
+                    }
                 }
             }
         }

@@ -49,10 +49,10 @@ RM = "C:\Program Files\JetBrains\CLion 2020.1.2\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower"
+CMAKE_SOURCE_DIR = C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower\cmake-build-debug"
+CMAKE_BINARY_DIR = C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -81,9 +81,9 @@ edit_cache\fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower\cmake-build-debug\CMakeFiles" "C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower\cmake-build-debug\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower\cmake-build-debug\CMakeFiles C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\AdrCh\Documents\GitHub\Spirit_Tower\SpiritTower\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,6 +123,87 @@ SpiritTower: cmake_check_build_system
 SpiritTower\fast:
 	$(MAKE) -f CMakeFiles\SpiritTower.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\SpiritTower.dir\build
 .PHONY : SpiritTower\fast
+
+src\Player.obj: src\Player.cpp.obj
+
+.PHONY : src\Player.obj
+
+# target to build an object file
+src\Player.cpp.obj:
+	$(MAKE) -f CMakeFiles\SpiritTower.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\SpiritTower.dir\src\Player.cpp.obj
+.PHONY : src\Player.cpp.obj
+
+src\Player.i: src\Player.cpp.i
+
+.PHONY : src\Player.i
+
+# target to preprocess a source file
+src\Player.cpp.i:
+	$(MAKE) -f CMakeFiles\SpiritTower.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\SpiritTower.dir\src\Player.cpp.i
+.PHONY : src\Player.cpp.i
+
+src\Player.s: src\Player.cpp.s
+
+.PHONY : src\Player.s
+
+# target to generate assembly for a file
+src\Player.cpp.s:
+	$(MAKE) -f CMakeFiles\SpiritTower.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\SpiritTower.dir\src\Player.cpp.s
+.PHONY : src\Player.cpp.s
+
+src\Specter.obj: src\Specter.cpp.obj
+
+.PHONY : src\Specter.obj
+
+# target to build an object file
+src\Specter.cpp.obj:
+	$(MAKE) -f CMakeFiles\SpiritTower.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\SpiritTower.dir\src\Specter.cpp.obj
+.PHONY : src\Specter.cpp.obj
+
+src\Specter.i: src\Specter.cpp.i
+
+.PHONY : src\Specter.i
+
+# target to preprocess a source file
+src\Specter.cpp.i:
+	$(MAKE) -f CMakeFiles\SpiritTower.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\SpiritTower.dir\src\Specter.cpp.i
+.PHONY : src\Specter.cpp.i
+
+src\Specter.s: src\Specter.cpp.s
+
+.PHONY : src\Specter.s
+
+# target to generate assembly for a file
+src\Specter.cpp.s:
+	$(MAKE) -f CMakeFiles\SpiritTower.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\SpiritTower.dir\src\Specter.cpp.s
+.PHONY : src\Specter.cpp.s
+
+src\controller.obj: src\controller.cpp.obj
+
+.PHONY : src\controller.obj
+
+# target to build an object file
+src\controller.cpp.obj:
+	$(MAKE) -f CMakeFiles\SpiritTower.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\SpiritTower.dir\src\controller.cpp.obj
+.PHONY : src\controller.cpp.obj
+
+src\controller.i: src\controller.cpp.i
+
+.PHONY : src\controller.i
+
+# target to preprocess a source file
+src\controller.cpp.i:
+	$(MAKE) -f CMakeFiles\SpiritTower.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\SpiritTower.dir\src\controller.cpp.i
+.PHONY : src\controller.cpp.i
+
+src\controller.s: src\controller.cpp.s
+
+.PHONY : src\controller.s
+
+# target to generate assembly for a file
+src\controller.cpp.s:
+	$(MAKE) -f CMakeFiles\SpiritTower.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\SpiritTower.dir\src\controller.cpp.s
+.PHONY : src\controller.cpp.s
 
 src\main.obj: src\main.cpp.obj
 
@@ -187,6 +268,15 @@ help:
 	@echo ... rebuild_cache
 	@echo ... SpiritTower
 	@echo ... edit_cache
+	@echo ... src/Player.obj
+	@echo ... src/Player.i
+	@echo ... src/Player.s
+	@echo ... src/Specter.obj
+	@echo ... src/Specter.i
+	@echo ... src/Specter.s
+	@echo ... src/controller.obj
+	@echo ... src/controller.i
+	@echo ... src/controller.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

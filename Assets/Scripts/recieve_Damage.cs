@@ -25,13 +25,20 @@ public class recieve_Damage : MonoBehaviour
 
         health = maxHealth;
     }
-   
+
+    public void ReduceHealth(float newHealth)
+    {
+        Debug.Log("At ReduceHealth(). Current health is " + health);
+        health = newHealth;
+        Debug.Log("New health is " + health);
+        CheckDeath();
+    }
     public void DealDamage(float damage)
     {
-        // Client.instance.SendData("REQUEST|PLAYER|DAMAGE:" + Math.Round(damage));
+        Client.instance.SendData("REQUEST|PLAYER|DAMAGE");
         print("NUMERO DANO  "+numHearts);
-        health -= damage;
-        CheckDeath();
+       // health -= damage;
+       // CheckDeath();
     }
     void CheckOverHeal()
     {

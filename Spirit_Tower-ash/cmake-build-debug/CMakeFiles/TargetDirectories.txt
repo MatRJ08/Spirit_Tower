@@ -1,0 +1,3 @@
+/home/ashley/CLionProjects/Spirit_Tower/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/ashley/CLionProjects/Spirit_Tower/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/ashley/CLionProjects/Spirit_Tower/cmake-build-debug/CMakeFiles/Spirit_Tower.dir

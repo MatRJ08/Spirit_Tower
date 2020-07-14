@@ -23,6 +23,10 @@ Server* Server::getInstance() {
     return instance;
 }
 
+void Server::printGameStuff() {
+    game->printGameData();
+}
+
 /**
  * Esta funcion analiza los mensajes recibidos mediante sockets, y los "traduce" para ser utilizados por
  * el servidor.
@@ -30,6 +34,31 @@ Server* Server::getInstance() {
  */
 void Server::readMessage(std::string message){
     std::string delimiter = "|";
+    // CREATE|ENEMY|Name|X:00,Y:00
+    if (message.substr(0,message.find(delimiter)) == "CREATE"){
+        // ENEMY|Name|X:00,Y:00
+        message = message.substr(message.find(delimiter)+1,message.size()-1);
+
+        // Name|X:00,Y:00
+        message = message.substr(message.find(delimiter)+1,message.size()-1);
+
+        std::string NAME = message.substr(0, message.find(delimiter));
+
+        message = message.substr(message.find(delimiter)+1,message.size()-1);
+
+        // X:00
+        std::string x = message.substr(0,message.find(","));
+
+        message = message.substr(message.find(",")+1, message.size()-1);
+
+        // Y:00
+        std::string y = message;
+
+        int X = std::stoi(x.substr(x.find(":")+1,x.length()-1));
+        int Y = std::stoi(y.substr(y.find(":")+1,y.length()-1));
+
+        game->createEnemy(NAME, X, Y);
+    } else
     // UPDATE|PLAYER|X:00,Y:00;HP:00
     if (message.substr(0,message.find(delimiter)) == "UPDATE"){
         message = message.substr(message.find(delimiter)+1,message.size()-1);
@@ -53,17 +82,16 @@ void Server::readMessage(std::string message){
             std::string hp = message;
 
             int X = std::stoi(x.substr(x.find(":")+1,x.length()-1));
-            game->setPlayerX(X);
             int Y = std::stoi(y.substr(y.find(":")+1,y.length()-1));
-            game->setPlayerY(Y);
             int HP = std::stoi(hp.substr(hp.find(":")+1,hp.length()-1));
-            game->setPlayerHP(HP);
+
+            game->updatePlayer(X, Y, HP);
 
             //std::cout << "Player = " << "X: " << X << " - Y: " << Y << " - HP: " << HP << std::endl;
 
             // TO-DO
             // Almacenar datos
-            std::cout << "Player = " << "X: " << game->getPlayerHP() << " - Y: " << game->getPlayerY() << " - HP: " << game->getPlayerHP() << std::endl;
+            //std::cout << "Player = " << "X: " << game->getPlayerHP() << " - Y: " << game->getPlayerY() << " - HP: " << game->getPlayerHP() << std::endl;
 
 
         } else  if (message.substr(0,message.find(delimiter)) == "ENEMY"){
@@ -84,8 +112,9 @@ void Server::readMessage(std::string message){
             int X = std::stoi(x.substr(x.find(":")+1,x.length()-1));
             int Y = std::stoi(y.substr(y.find(":")+1,y.length()-1));
 
+            game->updateEnemy(NAME, X, Y);
 
-            std::cout << "Enemy name: " << NAME << " - X:" << X << " - Y:" << Y << std::endl;
+            //std::cout << "Enemy name: " << NAME << " - X:" << X << " - Y:" << Y << std::endl;
             // TO-DO
             // Almacenar datos
 
@@ -217,6 +246,7 @@ int Server::run(){
     }
 
 
+    std::thread(&Server::printGameStuff,this).detach();
     do{
         iRecvResult = recv(ClientSocket, recvbuf, 1024, 0);
         if (iRecvResult > 0){

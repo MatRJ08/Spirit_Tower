@@ -1,10 +1,10 @@
-//
-// Created by AdrCh on 7/8/2020.
-//
-
+#pragma once
 #ifndef SPIRITTOWER_CONTROLLER_H
 #define SPIRITTOWER_CONTROLLER_H
 
+#include "Player.h"
+#include "Specter.h"
+#include "LinkedList.cpp"
 /**
  * Clase temporal para almacenar datos del jugador y realizar pruebas
  */
@@ -12,20 +12,17 @@ class GameController{
 
 public:
 
-    void setPlayerX(int X);
-    int getPlayerX();
-    void setPlayerY(int Y);
-    int getPlayerY();
-    void setPlayerHP(int HP);
-    int getPlayerHP();
+    void updatePlayer(int xP, int yP, int HP);
     void reducePlayerHealth(int damage);
-
+    int getPlayerHP();
+    void updateEnemy(std::string name, int xP, int yP);
+    void printGameData();
+    void createEnemy(std::string name, int xP, int yP);
     GameController();
 
 private:
-    int playerX;
-    int playerY;
-    int playerHP;
+    LinkedList<Specter>* specterList;
+    Player* player;
 
 };
 

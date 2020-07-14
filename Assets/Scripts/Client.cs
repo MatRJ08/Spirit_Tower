@@ -21,6 +21,7 @@ public class Client : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+            ConnectToTcpServer();
         }
         else
         {
@@ -32,7 +33,6 @@ public class Client : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ConnectToTcpServer();
 
     }
 
@@ -89,9 +89,22 @@ public class Client : MonoBehaviour
         }
     }
 
+    public bool isSocketConnected()
+    {
+        if (socket == null)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
     // Envia mensaje al servidor
     public void SendData(string data)
     {
+
         if (socket == null)
         {
             return;
@@ -102,7 +115,6 @@ public class Client : MonoBehaviour
             if (stream.CanWrite)
             {
                 byte[] clientMessageAsByteArray = Encoding.ASCII.GetBytes(data+delimiter);
-
 
                 stream.Write(clientMessageAsByteArray, 0, clientMessageAsByteArray.Length);
                 // Debug.Log("Client sent his message - should be received by server");
@@ -138,7 +150,7 @@ public class Client : MonoBehaviour
                     if (Int32.TryParse(dataToHandle[2], out newHealth))
                     {
                         Debug.Log("Damage taken, new health should be " + newHealth);
-                        player.GetComponent<recieve_Damage>().ReduceHealth(Convert.ToSingle(newHealth));
+                        player.GetComponent<Player_Movement>().reduceHealth(newHealth);
                     }
                     else
                     {

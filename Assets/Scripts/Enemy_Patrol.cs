@@ -22,6 +22,7 @@ public class Enemy_Patrol : MonoBehaviour
         spotDir = (moveSpots[spot].position - transform.position).normalized;
         lastMoveDir = spotDir;
         Player = GameObject.Find("PlayerSprite").transform;
+        Client.instance.SendData("CREATE|ENEMY|"+gameObject.name +"|X:" + Math.Round(transform.position.x) + ",Y:" + Math.Round(transform.position.y));
     }
 
 

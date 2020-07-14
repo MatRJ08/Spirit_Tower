@@ -20,6 +20,7 @@ public class recieve_Damage : MonoBehaviour
 
     void Start()
     {
+        movePoint = GameObject.Find("MovePoint").transform;
         movePoint.parent = null;
         InitPos = Player.position;
 

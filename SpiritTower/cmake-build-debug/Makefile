@@ -124,6 +124,33 @@ SpiritTower\fast:
 	$(MAKE) -f CMakeFiles\SpiritTower.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\SpiritTower.dir\build
 .PHONY : SpiritTower\fast
 
+src\LinkedList.obj: src\LinkedList.cpp.obj
+
+.PHONY : src\LinkedList.obj
+
+# target to build an object file
+src\LinkedList.cpp.obj:
+	$(MAKE) -f CMakeFiles\SpiritTower.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\SpiritTower.dir\src\LinkedList.cpp.obj
+.PHONY : src\LinkedList.cpp.obj
+
+src\LinkedList.i: src\LinkedList.cpp.i
+
+.PHONY : src\LinkedList.i
+
+# target to preprocess a source file
+src\LinkedList.cpp.i:
+	$(MAKE) -f CMakeFiles\SpiritTower.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\SpiritTower.dir\src\LinkedList.cpp.i
+.PHONY : src\LinkedList.cpp.i
+
+src\LinkedList.s: src\LinkedList.cpp.s
+
+.PHONY : src\LinkedList.s
+
+# target to generate assembly for a file
+src\LinkedList.cpp.s:
+	$(MAKE) -f CMakeFiles\SpiritTower.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\SpiritTower.dir\src\LinkedList.cpp.s
+.PHONY : src\LinkedList.cpp.s
+
 src\Player.obj: src\Player.cpp.obj
 
 .PHONY : src\Player.obj
@@ -268,6 +295,9 @@ help:
 	@echo ... rebuild_cache
 	@echo ... SpiritTower
 	@echo ... edit_cache
+	@echo ... src/LinkedList.obj
+	@echo ... src/LinkedList.i
+	@echo ... src/LinkedList.s
 	@echo ... src/Player.obj
 	@echo ... src/Player.i
 	@echo ... src/Player.s

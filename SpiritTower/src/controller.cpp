@@ -1,37 +1,59 @@
 #include "controller.h"
 
-void GameController::setPlayerHP(int HP) {
-    playerHP = HP;
+GameController::GameController() {
+    specterList = new LinkedList<Specter>();
+    player = new Player();
+    player->setHealth(100);
 }
 
-void GameController::setPlayerX(int X) {
-    playerX = X;
+void GameController::updateEnemy(std::string name, int xP, int yP) {
+    if(specterList->getSize() > 0){
+        Specter current;
+        for(int i = 0; i < specterList->getSize(); i++){
+            current = specterList->getNodeInIndex(i)->nodeData;
+            if(name == current.getName()){
+                current.setXPosition(xP);
+                current.setYPosition(yP);
+                break;
+            }
+        }
+    }
 }
 
-void GameController::setPlayerY(int Y) {
-    playerY = Y;
-}
-
-int GameController::getPlayerHP() {
-    return playerHP;
+void GameController::updatePlayer(int xP, int yP, int HP) {
+    player->setYPosition(xP);
+    player->setXPosition(yP);
+    //player->setHealth(HP);
 
 }
-int GameController::getPlayerX() {
-    return playerX;
 
-}
-int GameController::getPlayerY() {
-    return playerY;
+void GameController::printGameData() {
+    while(true) {
+        std::cout << "\n\nPlayer:\n" << "X:" << player->getXPosition() << ", Y:" << player->getYPosition() <<
+                  ", HP:" << player->getHealth() << std::endl;
+        if (specterList->getSize() > 0) {
+            Specter current;
+            for (int i = 0; i < specterList->getSize(); i++) {
+                current = specterList->getNodeInIndex(i)->nodeData;
+                std::cout << "Enemy " << current.getName() << ":\n" << "X:" << current.getXPosition() << ", Y:" <<
+                          current.getYPosition() << std::endl;
+            }
+        }
+    }
 
 }
 
 void GameController::reducePlayerHealth(int damage) {
-    playerHP -= damage;
+    player->takeDamage(damage);
 }
 
-GameController::GameController() {
-    playerX = 0;
-    playerY = 0;
-    playerHP = 0;
+int GameController::getPlayerHP() {
+    return player->getHealth();
+}
+
+void GameController::createEnemy(std::string name, int xP, int yP) {
+    Specter Espectro = Specter(name, xP, yP);
+    specterList->addNodeLast(Espectro);
 
 }
+

@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/AdrCh/Documents/GitHub/Spirit_Tower/SpiritTower/src/LinkedList.cpp">
+			<Option target="SpiritTower"/>
+		</Unit>
+		<Unit filename="C:/Users/AdrCh/Documents/GitHub/Spirit_Tower/SpiritTower/src/LinkedList.h">
+			<Option target="SpiritTower"/>
+		</Unit>
 		<Unit filename="C:/Users/AdrCh/Documents/GitHub/Spirit_Tower/SpiritTower/src/Player.cpp">
 			<Option target="SpiritTower"/>
 		</Unit>

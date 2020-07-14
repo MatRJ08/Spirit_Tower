@@ -6,6 +6,7 @@
 #include <iostream>
 #include <string>
 #include "controller.h"
+#include<thread>
 
 #pragma comment (lib, "Ws2_32.lib")
 
@@ -31,6 +32,7 @@ private:
     char recvbuf[1024];
     int iResult, iRecvResult, iSendResult;
     struct addrinfo *result = NULL, *ptr = NULL, hints;
+    void printGameStuff();
     Server();
     ~Server();
 

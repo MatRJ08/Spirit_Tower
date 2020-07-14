@@ -62,4 +62,9 @@ public class Player_Movement : MonoBehaviour
 
     }
 
+    public void reduceHealth(int newHealth)
+    {
+        GetComponent<recieve_Damage>().ReduceHealth(Convert.ToSingle(newHealth));
+    }
+
 }

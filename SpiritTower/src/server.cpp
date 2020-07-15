@@ -1,6 +1,10 @@
 #include "server.h"
-
-
+#include <sstream>
+#include "Game.h"
+float Datos[3];
+bool b=false;
+bool p =true;
+int PISO;
 Server::Server(){
 }
 
@@ -28,8 +32,68 @@ Server* Server::getInstance() {
  * @param message - Mensaje recibido por sockets
  */
 void Server::readMessage(std::string message){
+    if(b){
+        for (int j = 0; j <3 ; ++j) {
+            switch (PISO) {
+                case 0:
+                    Datos[0] = G->generar_gen()[j].get_vel_ruta();
+                    sendMessage("DAT|V_RUTA|"+ std::to_string(j) + "|" + std::to_string(Datos[0]));
+
+                    Datos[1] = G->generar_gen()[j].get_vel_persecucion();
+                    sendMessage("DAT|V_PER|"+ std::to_string(j) + "|" + std::to_string(Datos[1]));
+
+                    Datos[2] = G->generar_gen()[j].get_vision();
+                    sendMessage("DAT|RADIO|"+ std::to_string(j) + "|" + std::to_string(Datos[2]));
+
+                    break;
+                case 1:
+                    Datos[0] = G->generar_gen2()[j].get_vel_ruta();
+                    sendMessage("DAT|V_RUTA|"+ std::to_string(j) + "|" + std::to_string(Datos[0]));
+
+                    Datos[1] = G->generar_gen2()[j].get_vel_persecucion();
+                    sendMessage("DAT|V_PER|"+ std::to_string(j) + "|" + std::to_string(Datos[1]));
+
+                    Datos[2] = G->generar_gen2()[j].get_vision();
+                    sendMessage("DAT|RADIO|"+ std::to_string(j) + "|" + std::to_string(Datos[2]));
+
+                    break;
+                case 2:
+                    Datos[0] = G->generar_gen3()[j].get_vel_ruta();
+                    sendMessage("DAT|V_RUTA|"+ std::to_string(j) + "|" + std::to_string(Datos[0]));
+
+                    Datos[1] = G->generar_gen3()[j].get_vel_persecucion();
+                    sendMessage("DAT|V_PER|"+ std::to_string(j) + "|" + std::to_string(Datos[1]));
+
+                    Datos[2] = G->generar_gen3()[j].get_vision();
+                    sendMessage("DAT|RADIO|"+ std::to_string(j) + "|" + std::to_string(Datos[2]));
+
+                    break;
+                case 3:
+                    Datos[0] = G->generar_gen3()->get_vel_ruta();
+                    sendMessage("DAT|V_RUTA|"+ std::to_string(j) + "|" + std::to_string(Datos[0]));
+
+                    Datos[1] = G->generar_gen3()->get_vel_persecucion();
+                    sendMessage("DAT|V_PER|"+ std::to_string(j) + "|" + std::to_string(Datos[1]));
+
+                    Datos[2] = G->generar_gen3()->get_vision();
+                    sendMessage("DAT|RADIO|"+ std::to_string(j) + "|" + std::to_string(Datos[2]));
+
+                    break;
+            }
+        }
+        b=false;
+    }
     std::string delimiter = "|";
     // UPDATE|PLAYER|X:00,Y:00;HP:00
+    if(p) {
+        if (message.substr(0, message.find(delimiter)) == "PISO") {
+            message = message.substr(message.find(delimiter) + 1, message.size() - 1);
+            PISO = std::stoi(message);
+            p=false;
+            b=true;
+        }
+
+    }
     if (message.substr(0,message.find(delimiter)) == "UPDATE"){
         message = message.substr(message.find(delimiter)+1,message.size()-1);
 
@@ -60,28 +124,33 @@ void Server::readMessage(std::string message){
             // Almacenar datos
 
 
-        } else  if (message.substr(0,message.find(delimiter)) == "ENEMY"){
-            message = message.substr(message.find(delimiter)+1,message.size()-1);
+        } else  if (message.substr(0,message.find(delimiter)) == "ENEMY" ){
+            message = message.substr(message.find(delimiter)+1,message.length()-1);
 
-            std::string NAME = message.substr(0, message.find(delimiter));
+                std::string NAME = message.substr(0, message.find(delimiter));
 
-            message = message.substr(message.find(delimiter)+1,message.size()-1);
+                message = message.substr(message.find(delimiter) + 1, message.size() - 1);
 
-            // X:00
-            std::string x = message.substr(0,message.find(","));
+                // X:00
+                std::string x = message.substr(0, message.find(","));
 
-            message = message.substr(message.find(",")+1, message.size()-1);
+                message = message.substr(message.find(",") + 1, message.size() - 1);
 
-            // Y:00
-            std::string y = message;
-
-            int X = std::stoi(x.substr(x.find(":")+1,x.length()-1));
-            int Y = std::stoi(y.substr(y.find(":")+1,y.length()-1));
+                // Y:00
+                std::string y = message;
 
 
-            std::cout << "Enemy name: " << NAME << " - X:" << X << " - Y:" << Y << std::endl;
-            // TO-DO
-            // Almacenar datos
+                int X = std::stoi(x.substr(x.find(":") + 1, x.length() - 1));
+                int Y = std::stoi(y.substr(y.find(":") + 1, y.length() - 1));
+
+
+
+                std::cout << "Enemy name: " << NAME << " - X:" << X << " - Y:" << Y << std::endl;
+
+
+                // TO-DO
+                // Almacenar datos
+
 
         }
     } else if (message.substr(0,message.find(delimiter)) == "REQUEST"){
@@ -120,6 +189,7 @@ void Server::readMessage(std::string message){
  * @param message - mensaje a enviar por sockets
  */
 void Server::sendMessage(std::string message) {
+
     iSendResult = send(ClientSocket, message.c_str(), message.length(), 0);
     if (iSendResult == SOCKET_ERROR) {
         closesocket(ClientSocket);

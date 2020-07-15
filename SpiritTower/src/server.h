@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <string>
-
+#include "Game.h"
 #pragma comment (lib, "Ws2_32.lib")
 
 #define DEFAULT_PORT "27015"
@@ -16,6 +16,7 @@
 class Server{
 
 public:
+    Game *G=new Game();
     static Server* getInstance();
     int init();
     int run();

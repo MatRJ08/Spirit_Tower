@@ -4,96 +4,140 @@
 	<Project>
 		<Option title="SpiritTower"/>
 		<Option makefile_is_custom="1"/>
-		<Option compiler="msvc8"/>
+		<Option compiler="gcc"/>
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/Keons/New Unity Project/Spirit_Tower/SpiritTower/cmake-build-debug"/>
+				<Option working_dir="D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower\cmake-build-debug\Makefile&quot; VERBOSE=1 all"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="D:/DATOS II/mingw64/bin/mingw32-make.exe -f &quot;D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/DATOS II/mingw64/bin/mingw32-make.exe -f &quot;D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/DATOS II/mingw64/bin/mingw32-make.exe -f &quot;D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/DATOS II/mingw64/bin/mingw32-make.exe -f &quot;D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/Keons/New Unity Project/Spirit_Tower/SpiritTower/cmake-build-debug"/>
+				<Option working_dir="D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower\cmake-build-debug\Makefile&quot; VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="D:/DATOS II/mingw64/bin/mingw32-make.exe -f &quot;D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="D:/DATOS II/mingw64/bin/mingw32-make.exe -f &quot;D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/DATOS II/mingw64/bin/mingw32-make.exe -f &quot;D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/DATOS II/mingw64/bin/mingw32-make.exe -f &quot;D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="SpiritTower">
-				<Option output="C:/Users/Keons/New Unity Project/Spirit_Tower/SpiritTower/cmake-build-debug/SpiritTower.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Keons/New Unity Project/Spirit_Tower/SpiritTower/cmake-build-debug"/>
+				<Option output="D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/cmake-build-debug/SpiritTower.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
-				<Option compiler="msvc8"/>
+				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include"/>
-					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt"/>
+					<Add directory="D:/DATOS II/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="D:/DATOS II/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="D:/DATOS II/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="D:/DATOS II/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="D:/DATOS II/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="D:/DATOS II/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower\cmake-build-debug\Makefile&quot; VERBOSE=1 SpiritTower"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="D:/DATOS II/mingw64/bin/mingw32-make.exe -f &quot;D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/cmake-build-debug/Makefile&quot;  VERBOSE=1 SpiritTower"/>
+					<CompileFile command="D:/DATOS II/mingw64/bin/mingw32-make.exe -f &quot;D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/DATOS II/mingw64/bin/mingw32-make.exe -f &quot;D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/DATOS II/mingw64/bin/mingw32-make.exe -f &quot;D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="SpiritTower/fast">
-				<Option output="C:/Users/Keons/New Unity Project/Spirit_Tower/SpiritTower/cmake-build-debug/SpiritTower.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Keons/New Unity Project/Spirit_Tower/SpiritTower/cmake-build-debug"/>
+				<Option output="D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/cmake-build-debug/SpiritTower.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
-				<Option compiler="msvc8"/>
+				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include"/>
-					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt"/>
+					<Add directory="D:/DATOS II/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="D:/DATOS II/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="D:/DATOS II/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="D:/DATOS II/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="D:/DATOS II/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="D:/DATOS II/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower\cmake-build-debug\Makefile&quot; VERBOSE=1 SpiritTower/fast"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="D:/DATOS II/mingw64/bin/mingw32-make.exe -f &quot;D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/cmake-build-debug/Makefile&quot;  VERBOSE=1 SpiritTower/fast"/>
+					<CompileFile command="D:/DATOS II/mingw64/bin/mingw32-make.exe -f &quot;D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/DATOS II/mingw64/bin/mingw32-make.exe -f &quot;D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/DATOS II/mingw64/bin/mingw32-make.exe -f &quot;D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/Keons/New Unity Project/Spirit_Tower/SpiritTower/cmake-build-debug"/>
+				<Option working_dir="D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower\cmake-build-debug\Makefile&quot; VERBOSE=1 edit_cache"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\Keons\New Unity Project\Spirit_Tower\SpiritTower\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="D:/DATOS II/mingw64/bin/mingw32-make.exe -f &quot;D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="D:/DATOS II/mingw64/bin/mingw32-make.exe -f &quot;D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/DATOS II/mingw64/bin/mingw32-make.exe -f &quot;D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/DATOS II/mingw64/bin/mingw32-make.exe -f &quot;D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Keons/New Unity Project/Spirit_Tower/SpiritTower/src/main.cpp">
+		<Unit filename="D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/src/Criaturas.cpp">
 			<Option target="SpiritTower"/>
 		</Unit>
-		<Unit filename="C:/Users/Keons/New Unity Project/Spirit_Tower/SpiritTower/src/server.cpp">
+		<Unit filename="D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/src/Criaturas.h">
 			<Option target="SpiritTower"/>
 		</Unit>
-		<Unit filename="C:/Users/Keons/New Unity Project/Spirit_Tower/SpiritTower/src/server.h">
+		<Unit filename="D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/src/Game.cpp">
 			<Option target="SpiritTower"/>
 		</Unit>
-		<Unit filename="C:/Users/Keons/New Unity Project/Spirit_Tower/SpiritTower/CMakeLists.txt">
+		<Unit filename="D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/src/Game.h">
+			<Option target="SpiritTower"/>
+		</Unit>
+		<Unit filename="D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/src/genetico/Espectros.cpp">
+			<Option target="SpiritTower"/>
+		</Unit>
+		<Unit filename="D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/src/genetico/Espectros.h">
+			<Option target="SpiritTower"/>
+		</Unit>
+		<Unit filename="D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/src/genetico/Evolucionador.cpp">
+			<Option target="SpiritTower"/>
+		</Unit>
+		<Unit filename="D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/src/genetico/Evolucionador.h">
+			<Option target="SpiritTower"/>
+		</Unit>
+		<Unit filename="D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/src/main.cpp">
+			<Option target="SpiritTower"/>
+		</Unit>
+		<Unit filename="D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/src/path/A_star.cpp">
+			<Option target="SpiritTower"/>
+		</Unit>
+		<Unit filename="D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/src/path/A_star.h">
+			<Option target="SpiritTower"/>
+		</Unit>
+		<Unit filename="D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/src/path/Backtracking.cpp">
+			<Option target="SpiritTower"/>
+		</Unit>
+		<Unit filename="D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/src/path/Backtracking.h">
+			<Option target="SpiritTower"/>
+		</Unit>
+		<Unit filename="D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/src/path/Nodo.cpp">
+			<Option target="SpiritTower"/>
+		</Unit>
+		<Unit filename="D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/src/path/Nodo.h">
+			<Option target="SpiritTower"/>
+		</Unit>
+		<Unit filename="D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/src/path/lista.cpp">
+			<Option target="SpiritTower"/>
+		</Unit>
+		<Unit filename="D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/src/path/lista.h">
+			<Option target="SpiritTower"/>
+		</Unit>
+		<Unit filename="D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/src/server.cpp">
+			<Option target="SpiritTower"/>
+		</Unit>
+		<Unit filename="D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/src/server.h">
+			<Option target="SpiritTower"/>
+		</Unit>
+		<Unit filename="D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

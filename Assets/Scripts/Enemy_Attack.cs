@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Enemy_Attack : MonoBehaviour
 {
+    private bool DAT = true;
     public Transform EnemyInstaKill;
     private float EIKRange = 0.9f;
     public int maxHealth = 100;
@@ -20,10 +21,11 @@ public class Enemy_Attack : MonoBehaviour
     public float startShootTime;
     [SerializeField] private Transform pfFieldOfView;
     [SerializeField] private float fov;
-    [SerializeField] private float viewDistance;
+    public float viewDistance;
     private FieldOfView fieldOfView;
     private Enemy_Patrol Patrol;
     public bool isIn = false;
+    public bool b = true;
     Vector3 aimDir;
     void Start()
     {
@@ -37,6 +39,7 @@ public class Enemy_Attack : MonoBehaviour
         fieldOfView.SetViewDistance(viewDistance);
 
         Patrol = GetComponent<Enemy_Patrol>();
+       
 
     }
     void Update()
@@ -66,12 +69,18 @@ public class Enemy_Attack : MonoBehaviour
             float angle = Vector2.Angle(aimDir, dirToPlayer);
             if (angle < fov / 2f)
             {
+                
                 foreach(Collider2D jugador in hit)
                 {
+                    
                     if (jugador.name == "PlayerSprite")
                     {
-                        Player.GetComponent<recieve_Damage>().DealDamage(Player.GetComponent<recieve_Damage>().maxHealth);
-                        print("INSTAKILL ");
+                        if (b)
+                        {
+                            b = false;
+                            Player.GetComponent<recieve_Damage>().DealDamage(Player.GetComponent<recieve_Damage>().maxHealth);
+                            print("INSTAKILL ");
+                        }
                     }
                 }
 

@@ -11,27 +11,30 @@ public class Player_Movement : MonoBehaviour
     public Transform movePoint;
     public Animator animator;
     Vector2 movement;
+    private int Piso;
 
     public LayerMask stopMovement;
 
     private void Start()
     {
+        print("Piso "+Piso);
+        
         movePoint.parent = null;
 
     }
 
     private void Update()
     {
-        
+        Client.instance.SendData("PISO|" + Piso);
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
-        
-        
-        //Client.instance.SendData("UPDATE|PLAYER|X:" + Math.Round(transform.position.x) + ",Y:" + Math.Round(transform.position.y) + ";HP:"+ Math.Round(GetComponent<recieve_Damage>().health));
-        
+
+
+        Client.instance.SendData("UPDATE|PLAYER|X:" + Math.Round(transform.position.x) + ",Y:" + Math.Round(transform.position.y) + ";HP:" + Math.Round(GetComponent<recieve_Damage>().health));
+
     }
 
     private void FixedUpdate()
@@ -60,6 +63,10 @@ public class Player_Movement : MonoBehaviour
         }
 
 
+    }
+    private void OnLevelWasLoaded(int level)
+    {
+        Piso = level;
     }
 
 }

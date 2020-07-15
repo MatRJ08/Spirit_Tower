@@ -6,15 +6,57 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Keons/New Unity Project/Spirit_Tower/SpiritTower/src/main.cpp
-server.h
-C:/Users/Keons/New Unity Project/Spirit_Tower/SpiritTower/src/server.h
+D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/src/Game.h
+genetico/Espectros.h
+D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/src/genetico/Espectros.h
+genetico/Evolucionador.h
+D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/src/genetico/Evolucionador.h
+path/lista.h
+D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/src/path/lista.h
+path/Nodo.h
+D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/src/path/Nodo.h
 
-C:/Users/Keons/New Unity Project/Spirit_Tower/SpiritTower/src/server.cpp
-server.h
-C:/Users/Keons/New Unity Project/Spirit_Tower/SpiritTower/src/server.h
+D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/src/genetico/Espectros.h
+cstdlib
+-
+iostream
+-
+../path/lista.h
+D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/src/path/lista.h
+../path/Nodo.h
+D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/src/path/Nodo.h
 
-C:/Users/Keons/New Unity Project/Spirit_Tower/SpiritTower/src/server.h
+D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/src/genetico/Evolucionador.h
+Espectros.h
+D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/src/genetico/Espectros.h
+
+D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/src/path/Nodo.h
+iostream
+-
+string
+-
+
+D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/src/path/lista.h
+fstream
+-
+string
+-
+cstdlib
+-
+iostream
+-
+Nodo.h
+D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/src/path/Nodo.h
+
+D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/src/server.cpp
+server.h
+D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/src/server.h
+sstream
+-
+Game.h
+D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/src/Game.h
+
+D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/src/server.h
 WS2tcpip.h
 -
 stdio.h
@@ -23,4 +65,6 @@ iostream
 -
 string
 -
+Game.h
+D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/src/Game.h
 

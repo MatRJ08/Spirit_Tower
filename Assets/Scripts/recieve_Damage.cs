@@ -26,12 +26,18 @@ public class recieve_Damage : MonoBehaviour
 
         health = maxHealth;
     }
-   
+    public void ReduceHealth(float newHealth)
+    {
+        print("REDUCE");
+        health -= newHealth;
+        Debug.Log("New health is " + health);
+        CheckDeath();
+    }
+
     public void DealDamage(float damage)
     {
-        // Client.instance.SendData("REQUEST|PLAYER|DAMAGE:" + Math.Round(damage));
-        health -= damage;
-        CheckDeath();
+        print("DAMAGE:  " + damage);
+        Client.instance.SendData("REQUEST|PLAYER|DAMAGE:" + Math.Round(damage));
     }
     void CheckOverHeal()
     {
@@ -43,6 +49,7 @@ public class recieve_Damage : MonoBehaviour
 
     void CangeHearts()
     {
+        print("CHANGEEEEEEEEEEE  "+numHearts);
         for (int i = 1; i < hearts.Length; i++)
         {
             if (i < numHearts)
@@ -102,6 +109,7 @@ public class recieve_Damage : MonoBehaviour
                 enemies[i].transform.position = patrol.moveSpots[0].position;
 
             }
+            enemies[i].GetComponent<Enemy_Attack>().b = true;
         }
     }
 }

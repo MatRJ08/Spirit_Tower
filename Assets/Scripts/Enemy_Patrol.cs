@@ -6,6 +6,7 @@ using UnityEngine;
 public class Enemy_Patrol : MonoBehaviour
 {
     public float speed;//Velocidad de movimiento
+    public float runSpeed;
     private float waitTime; //Tienpo de espera en cada punto
     public float startWaitTime; //Tiempo maximo de espera
     public Transform[] moveSpots;// Lista de puntos de vigilancia 
@@ -28,10 +29,10 @@ public class Enemy_Patrol : MonoBehaviour
     void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position, moveSpots[spot].position, speed * Time.deltaTime);//Posiciona el enemigo en el punto
-        
-        if (Vector2.Distance(transform.position,moveSpots[spot].position)<0.2f)// verifica que haya llegado
+
+        if (Vector2.Distance(transform.position, moveSpots[spot].position) < 0.2f)// verifica que haya llegado
         {
-            if (waitTime<=0)//Verifica que sea tiempo de moverse
+            if (waitTime <= 0)//Verifica que sea tiempo de moverse
             {
                 if (spot == moveSpots.Length - 1)//Verifica que el iterador no sobrepase la lista
                 {
@@ -49,12 +50,12 @@ public class Enemy_Patrol : MonoBehaviour
             }
         }
 
-        //Client.instance.SendData("UPDATE|ENEMY|" + gameObject.name + "|X:" + Math.Round(transform.position.x) + ",Y:" + Math.Round(transform.position.y));
-        
+        Client.instance.SendData("UPDATE|ENEMY|" + gameObject.name + "|X:" + Math.Round(transform.position.x) + ",Y:" + Math.Round(transform.position.y));
+
 
     }
 
-    public  Vector3 GetAimDir()
+    public Vector3 GetAimDir()
     {
         return lastMoveDir;
     }

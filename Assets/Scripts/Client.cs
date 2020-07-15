@@ -8,9 +8,13 @@ using UnityEngine;
 
 public class Client : MonoBehaviour
 {
+    [SerializeField] private Transform[] enemies;
+    public GameObject player;
     private TcpClient socket;
     private Thread clientReceiveThread;
     private string delimiter = "~";
+    private LinkedList<string> incomingQueue = new LinkedList<string>();
+    private float[] DAT = new float[3];
     public static Client instance { get; private set; }
 
     private void Awake()
@@ -37,7 +41,7 @@ public class Client : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        handleIncomingData();
 
     }
 
@@ -73,9 +77,10 @@ public class Client : MonoBehaviour
                         var incomingData = new byte[length];
                         Array.Copy(bytes, 0, incomingData, 0, length);
 
-                        
+
                         string serverMessage = Encoding.ASCII.GetString(incomingData);
-                        handleIncomingData(serverMessage);
+                        incomingQueue.Queue(serverMessage);
+                        //handleIncomingData(serverMessage);
                     }
                 }
             }
@@ -89,6 +94,7 @@ public class Client : MonoBehaviour
     // Envia mensaje al servidor
     public void SendData(string data)
     {
+        
         if (socket == null)
         {
             return;
@@ -98,7 +104,7 @@ public class Client : MonoBehaviour
             NetworkStream stream = socket.GetStream();
             if (stream.CanWrite)
             {
-                byte[] clientMessageAsByteArray = Encoding.ASCII.GetBytes(data+delimiter);
+                byte[] clientMessageAsByteArray = Encoding.ASCII.GetBytes(data + delimiter);
 
 
                 stream.Write(clientMessageAsByteArray, 0, clientMessageAsByteArray.Length);
@@ -112,27 +118,120 @@ public class Client : MonoBehaviour
         }
     }
 
-    void handleIncomingData(string message)
+    void handleIncomingData()
     {
-        string[] dataToHandle = message.Split('|');
 
-        
-        if (dataToHandle[0] == "PLAYER")
+        if (incomingQueue.Peek() == null)
         {
+            return;
+        }
+        else
+        {
+            string message = incomingQueue.Pop();
 
-            if (dataToHandle[1] == "rHEALTH")
+
+
+            string[] dataToHandle = message.Split('|');
+
+
+            if (dataToHandle[0] == "DAT")
             {
-                int damageTaken = 0;
-                Debug.Log("Test: " +  dataToHandle[2] + " fin de test");
-                if (Int32.TryParse(dataToHandle[2], out damageTaken))
+                if(dataToHandle[1]== "V_RUTA")
                 {
-                    int suma = damageTaken + damageTaken;
+                    if (dataToHandle[2] == "0")
+                    {
+                        decimal ruta;
+                        decimal.TryParse(dataToHandle[3], out ruta);
+                        ruta = Math.Round(ruta, 2);
+                        enemies[0].GetComponent<Enemy_Attack>().GetComponent<Enemy_Patrol>().speed= Convert.ToSingle(ruta);
+                        
+                    }
+                    if (dataToHandle[2] == "1")
+                    {
+                        decimal ruta;
+                        decimal.TryParse(dataToHandle[3], out ruta);
+                        ruta = Math.Round(ruta, 2);
+                        enemies[1].GetComponent<Enemy_Attack>().GetComponent<Enemy_Patrol>().speed = Convert.ToSingle(ruta);
+                    }
+                    if (dataToHandle[2] == "2")
+                    {
+                        decimal ruta;
+                        decimal.TryParse(dataToHandle[3], out ruta);
+                        ruta = Math.Round(ruta, 2);
+                        enemies[2].GetComponent<Enemy_Attack>().GetComponent<Enemy_Patrol>().speed = Convert.ToSingle(ruta);
+                    }
+
+
                 }
-                else
+                if(dataToHandle[1] == "V_PER")
                 {
-                    Debug.Log("Error in message received");
+                    if (dataToHandle[2] == "0")
+                    {
+                        decimal ruta;
+                        decimal.TryParse(dataToHandle[3], out ruta);
+                        ruta = Math.Round(ruta, 2);
+                        enemies[0].GetComponent<Enemy_Attack>().GetComponent<Enemy_Patrol>().runSpeed = Convert.ToSingle(ruta);
+                    }
+                    if (dataToHandle[2] == "1")
+                    {
+                        decimal ruta;
+                        decimal.TryParse(dataToHandle[3], out ruta);
+                        ruta = Math.Round(ruta, 2);
+                        enemies[1].GetComponent<Enemy_Attack>().GetComponent<Enemy_Patrol>().runSpeed = Convert.ToSingle(ruta);
+                    }
+                    if (dataToHandle[2] == "2")
+                    {
+                        decimal ruta;
+                        decimal.TryParse(dataToHandle[3], out ruta);
+                        ruta = Math.Round(ruta, 2);
+                        enemies[2].GetComponent<Enemy_Attack>().GetComponent<Enemy_Patrol>().runSpeed = Convert.ToSingle(ruta);
+                    }
+
+                }
+                if(dataToHandle[1] == "RADIO")
+                {
+                    if (dataToHandle[2] == "0")
+                    {
+                        decimal ruta;
+                        decimal.TryParse(dataToHandle[3], out ruta);
+                        ruta = Math.Round(ruta, 2);
+                        enemies[0].GetComponent<Enemy_Attack>().GetComponent<Enemy_Attack>().viewDistance = Convert.ToSingle(ruta);
+                    }
+                    if (dataToHandle[2] == "1")
+                    {
+                        decimal ruta;
+                        decimal.TryParse(dataToHandle[3], out ruta);
+                        ruta = Math.Round(ruta, 2);
+                        enemies[1].GetComponent<Enemy_Attack>().GetComponent<Enemy_Attack>().viewDistance = Convert.ToSingle(ruta);
+                    }
+                    if (dataToHandle[2] == "2")
+                    {
+                        decimal ruta;
+                        decimal.TryParse(dataToHandle[3], out ruta);
+                        ruta = Math.Round(ruta, 2);
+                        enemies[2].GetComponent<Enemy_Attack>().GetComponent<Enemy_Attack>().viewDistance = Convert.ToSingle(ruta);
+                    }
+                }
+
+            }
+            if (dataToHandle[0] == "PLAYER")
+            {
+
+                if (dataToHandle[1] == "rHEALTH")
+                {
+                    int Damage = 0;
+                    if (Int32.TryParse(dataToHandle[2], out Damage))
+                    {
+                        //Debug.Log("Damage taken, new health should be " + player.GetComponent<recieve_Damage>().health-Dama);
+                        player.GetComponent<recieve_Damage>().ReduceHealth(Convert.ToSingle(Damage));
+                    }
+                    else
+                    {
+                        Debug.Log("Error in message received");
+                    }
                 }
             }
         }
     }
+    
 }

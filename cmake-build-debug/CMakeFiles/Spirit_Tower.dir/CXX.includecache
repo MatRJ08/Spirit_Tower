@@ -6,12 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/ashley/CLionProjects/Spirit_Tower/genetico/Espectros.cpp
-Espectros.h
-/home/ashley/CLionProjects/Spirit_Tower/genetico/Espectros.h
-stdlib.h
--
-
 /home/ashley/CLionProjects/Spirit_Tower/genetico/Espectros.h
 cstdlib
 -
@@ -21,6 +15,20 @@ iostream
 /home/ashley/CLionProjects/Spirit_Tower/path/lista.h
 ../path/Nodo.h
 /home/ashley/CLionProjects/Spirit_Tower/path/Nodo.h
+
+/home/ashley/CLionProjects/Spirit_Tower/genetico/Evolucionador.cpp
+Evolucionador.h
+/home/ashley/CLionProjects/Spirit_Tower/genetico/Evolucionador.h
+stdio.h
+-
+stdlib.h
+-
+iostream
+-
+
+/home/ashley/CLionProjects/Spirit_Tower/genetico/Evolucionador.h
+Espectros.h
+/home/ashley/CLionProjects/Spirit_Tower/genetico/Espectros.h
 
 /home/ashley/CLionProjects/Spirit_Tower/path/Nodo.h
 iostream

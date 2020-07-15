@@ -136,7 +136,6 @@ Espectros* Evolucionador::get_nueva_gen(){
 int Evolucionador::Mutacion(){
     //Se selecciona uno de los hijos a los cuales se les hará mutación
     int gen_mutado = rand() % 3 ;
-    cout << gen_mutado << endl;
     return  gen_mutado;
 }
 

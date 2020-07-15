@@ -23,6 +23,9 @@ private:
 public:
 
     Espectros * generar_gen();
+    Espectros * generar_gen2();
+    Espectros * generar_gen3();
+    Espectros * generar_gen4();
 
 };
 

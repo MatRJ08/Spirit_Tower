@@ -13,6 +13,8 @@ class Evolucionador {
 
 public:
 
+    Espectros nuevoes[3];
+
     Evolucionador();
 
     Espectros* Evolucion(Espectros* a);
@@ -22,7 +24,7 @@ public:
     Espectros* Seleccion(int* chequear_resistencia, Espectros[]);
 
     Espectros* Cruce(Espectros padre1, Espectros padre2);
-
+    Espectros* get_nueva_gen();
     int Mutacion();
 
     int Index (int arr[], int t);

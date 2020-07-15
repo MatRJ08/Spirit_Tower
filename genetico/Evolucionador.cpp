@@ -17,21 +17,8 @@ Evolucionador::Evolucionador() {
 
 }
 
-//Función para controlar el proceso evolutivo de las distintas generaciones
-Espectros* Evolucionador::Evolucion(Espectros* a){
-    Espectros NEW[3];
-    Espectros are[2];
 
-
-    int arreglogenetico[3];
-    *arreglogenetico = *Obtener_Resistencia(a);
-    *are = *Seleccion(arreglogenetico, a); //Arreglo para almacenar a los dos estudiantes con mejores fitness
-    *NEW = *Cruce(are[0], are[1]);
-    return
-            NEW;
-}
-
-//Se reciben los estudiantes creados en la primera generación para las siguientes generaciones
+//Se reciben los espectros creados en la primera generación para las siguientes generaciones
 //Esta será la función de fitness para calcular a los mejores de cada generación
 //Esto lo toma contando la resistencia total de cada uno de los estudiantes
 int* Evolucionador::Obtener_Resistencia(Espectros  arreglo[]){
@@ -77,7 +64,7 @@ Espectros*  Evolucionador::Cruce(Espectros padre1, Espectros padre2){
 
     //Gen que será mutado en el proceso
     int mutante = Mutacion();
-    Espectros nuevoes[3];
+
 
     //De aquí se obtiene la nueva generación
     //Los nuevos hijos heredan genes de ambos padres, según una determinada configuración de genes
@@ -94,8 +81,8 @@ Espectros*  Evolucionador::Cruce(Espectros padre1, Espectros padre2){
                 if (mutante == 0) {
 
                     cout << ("Habrá Mutación")<< endl;
-                    nuevoes[hijo].set_vel_ruta(4);
-                    nuevoes[hijo].set_vision(5);
+                    nuevoes[hijo].set_vel_ruta(6);
+                    nuevoes[hijo].set_vision(7);
                 }
                 nuevoes[hijo].Estadisticas();
                 break;
@@ -104,13 +91,13 @@ Espectros*  Evolucionador::Cruce(Espectros padre1, Espectros padre2){
                 //Hijo 2
             case 1: {
                 nuevoes[hijo].set_vel_ruta(padre2.get_vel_ruta());
-                nuevoes[hijo].set_vel_persecucion(padre2.get_vel_persecucion());
-                nuevoes[hijo].set_vision(padre1.get_vision());
+                nuevoes[hijo].set_vel_persecucion(padre1.get_vel_persecucion());
+                nuevoes[hijo].set_vision(padre2.get_vision());
                 if (mutante == 1) {
 
                     cout << ("Habrá Mutación")<< endl;
-                    nuevoes[hijo].set_vel_ruta(4);
-                    nuevoes[hijo].set_vision(5);
+                    nuevoes[hijo].set_vel_ruta(6);
+                    nuevoes[hijo].set_vision(7);
                 }
                 nuevoes[hijo].Estadisticas();
                 break;
@@ -124,8 +111,8 @@ Espectros*  Evolucionador::Cruce(Espectros padre1, Espectros padre2){
                 if (mutante == 2) {
 
                     cout << ("Habrá Mutación") << endl;
-                    nuevoes[hijo].set_vel_ruta(4);
-                    nuevoes[hijo].set_vision(5);
+                    nuevoes[hijo].set_vel_ruta(6);
+                    nuevoes[hijo].set_vision(7);
                 }
                 nuevoes[hijo].Estadisticas();
                 break;
@@ -133,17 +120,23 @@ Espectros*  Evolucionador::Cruce(Espectros padre1, Espectros padre2){
         }
     }
 
-    cout << "sale del for" << endl;
     return nuevoes;
 
 
 }
 
 
+Espectros* Evolucionador::get_nueva_gen(){
+    return nuevoes;
+}
+
+
+
 //Función para encargarse de escoger el gen (caracterisitca) a mutar y enviarla a la función de creación
 int Evolucionador::Mutacion(){
     //Se selecciona uno de los hijos a los cuales se les hará mutación
-    int gen_mutado = rand() % 3 + 0;
+    int gen_mutado = rand() % 3 ;
+    cout << gen_mutado << endl;
     return  gen_mutado;
 }
 

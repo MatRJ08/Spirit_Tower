@@ -6,25 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/ashley/CLionProjects/Spirit_Tower/Criaturas.h
-genetico/Espectros.h
+/home/ashley/CLionProjects/Spirit_Tower/genetico/Espectros.cpp
+Espectros.h
 /home/ashley/CLionProjects/Spirit_Tower/genetico/Espectros.h
-
-/home/ashley/CLionProjects/Spirit_Tower/Game.cpp
-Game.h
-/home/ashley/CLionProjects/Spirit_Tower/Game.h
-Criaturas.h
-/home/ashley/CLionProjects/Spirit_Tower/Criaturas.h
-
-/home/ashley/CLionProjects/Spirit_Tower/Game.h
-genetico/Espectros.h
-/home/ashley/CLionProjects/Spirit_Tower/genetico/Espectros.h
-genetico/Evolucionador.h
-/home/ashley/CLionProjects/Spirit_Tower/genetico/Evolucionador.h
-path/lista.h
-/home/ashley/CLionProjects/Spirit_Tower/path/lista.h
-path/Nodo.h
-/home/ashley/CLionProjects/Spirit_Tower/path/Nodo.h
+stdlib.h
+-
 
 /home/ashley/CLionProjects/Spirit_Tower/genetico/Espectros.h
 cstdlib
@@ -35,10 +21,6 @@ iostream
 /home/ashley/CLionProjects/Spirit_Tower/path/lista.h
 ../path/Nodo.h
 /home/ashley/CLionProjects/Spirit_Tower/path/Nodo.h
-
-/home/ashley/CLionProjects/Spirit_Tower/genetico/Evolucionador.h
-Espectros.h
-/home/ashley/CLionProjects/Spirit_Tower/genetico/Espectros.h
 
 /home/ashley/CLionProjects/Spirit_Tower/path/Nodo.h
 iostream

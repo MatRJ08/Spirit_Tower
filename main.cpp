@@ -46,7 +46,9 @@ int main(int argc, char *argv[]){
     //A_star_test();
     Game* m = new Game();
     m->generar_gen();
-
+    m->generar_gen2();
+    m->generar_gen3();
+    m->generar_gen4();
 
     return 0;
 }

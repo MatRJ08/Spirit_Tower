@@ -3,6 +3,7 @@
 //
 
 #include "Espectros.h"
+#include <stdlib.h>
 using namespace std;
 
 Espectros::Espectros() {
@@ -13,9 +14,9 @@ Espectros::Espectros() {
      ----------------------------------------------------------------------------------------------------*/
     //Se generarán aleatoriamente la cantidad de caracteristicas de los espectros
 
-    veloc_ruta = rand() % 3 + 1;
-    veloc_pers = rand() % 3 + 1;
-    radio_vision = rand() % 3 + 1;
+    veloc_ruta = rand() % 5 + 1;
+    veloc_pers = rand() % 5 + 1;
+    radio_vision = rand() % 5 + 1;
     id = rand() % 3 + 0;
 
 
@@ -24,7 +25,7 @@ Espectros::Espectros() {
     vel_ruta = veloc_ruta;
     vel_persecucion = veloc_pers;
     vision = radio_vision;
-    total = vel_ruta + vel_persecucion + vision;
+
 
 }
 //Esta función calculará toda la resistencia del ogro según los atributos asociados
@@ -57,7 +58,7 @@ void  Espectros::Estadisticas (){
     cout <<"Velocidad de ruta: "<< get_vel_ruta() << "\n";
     cout <<"Velocidad de persecucion: "<< get_vel_persecucion() << "\n";
     cout <<"Radio de vision: " << get_vision() << "\n";
-    cout <<"Total: "<< get_total() << "\n";
+    cout <<"Total: "<< get_vel_ruta() + get_vel_persecucion() + get_vision() << "\n";
 
 
 }
@@ -95,7 +96,7 @@ int Espectros::getEsI() const {
     return es_i;
 }
 int Espectros::get_total() const {
-    return total;
+    return get_vel_ruta() + get_vel_persecucion() + get_vision();
 }
 
 

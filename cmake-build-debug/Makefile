@@ -123,113 +123,113 @@ Spirit_Tower/fast:
 	$(MAKE) -f CMakeFiles/Spirit_Tower.dir/build.make CMakeFiles/Spirit_Tower.dir/build
 .PHONY : Spirit_Tower/fast
 
-A_star.o: A_star.cpp.o
+Criaturas.o: Criaturas.cpp.o
 
-.PHONY : A_star.o
-
-# target to build an object file
-A_star.cpp.o:
-	$(MAKE) -f CMakeFiles/Spirit_Tower.dir/build.make CMakeFiles/Spirit_Tower.dir/A_star.cpp.o
-.PHONY : A_star.cpp.o
-
-A_star.i: A_star.cpp.i
-
-.PHONY : A_star.i
-
-# target to preprocess a source file
-A_star.cpp.i:
-	$(MAKE) -f CMakeFiles/Spirit_Tower.dir/build.make CMakeFiles/Spirit_Tower.dir/A_star.cpp.i
-.PHONY : A_star.cpp.i
-
-A_star.s: A_star.cpp.s
-
-.PHONY : A_star.s
-
-# target to generate assembly for a file
-A_star.cpp.s:
-	$(MAKE) -f CMakeFiles/Spirit_Tower.dir/build.make CMakeFiles/Spirit_Tower.dir/A_star.cpp.s
-.PHONY : A_star.cpp.s
-
-Backtracking.o: Backtracking.cpp.o
-
-.PHONY : Backtracking.o
+.PHONY : Criaturas.o
 
 # target to build an object file
-Backtracking.cpp.o:
-	$(MAKE) -f CMakeFiles/Spirit_Tower.dir/build.make CMakeFiles/Spirit_Tower.dir/Backtracking.cpp.o
-.PHONY : Backtracking.cpp.o
+Criaturas.cpp.o:
+	$(MAKE) -f CMakeFiles/Spirit_Tower.dir/build.make CMakeFiles/Spirit_Tower.dir/Criaturas.cpp.o
+.PHONY : Criaturas.cpp.o
 
-Backtracking.i: Backtracking.cpp.i
+Criaturas.i: Criaturas.cpp.i
 
-.PHONY : Backtracking.i
+.PHONY : Criaturas.i
 
 # target to preprocess a source file
-Backtracking.cpp.i:
-	$(MAKE) -f CMakeFiles/Spirit_Tower.dir/build.make CMakeFiles/Spirit_Tower.dir/Backtracking.cpp.i
-.PHONY : Backtracking.cpp.i
+Criaturas.cpp.i:
+	$(MAKE) -f CMakeFiles/Spirit_Tower.dir/build.make CMakeFiles/Spirit_Tower.dir/Criaturas.cpp.i
+.PHONY : Criaturas.cpp.i
 
-Backtracking.s: Backtracking.cpp.s
+Criaturas.s: Criaturas.cpp.s
 
-.PHONY : Backtracking.s
+.PHONY : Criaturas.s
 
 # target to generate assembly for a file
-Backtracking.cpp.s:
-	$(MAKE) -f CMakeFiles/Spirit_Tower.dir/build.make CMakeFiles/Spirit_Tower.dir/Backtracking.cpp.s
-.PHONY : Backtracking.cpp.s
+Criaturas.cpp.s:
+	$(MAKE) -f CMakeFiles/Spirit_Tower.dir/build.make CMakeFiles/Spirit_Tower.dir/Criaturas.cpp.s
+.PHONY : Criaturas.cpp.s
 
-Nodo.o: Nodo.cpp.o
+Game.o: Game.cpp.o
 
-.PHONY : Nodo.o
+.PHONY : Game.o
 
 # target to build an object file
-Nodo.cpp.o:
-	$(MAKE) -f CMakeFiles/Spirit_Tower.dir/build.make CMakeFiles/Spirit_Tower.dir/Nodo.cpp.o
-.PHONY : Nodo.cpp.o
+Game.cpp.o:
+	$(MAKE) -f CMakeFiles/Spirit_Tower.dir/build.make CMakeFiles/Spirit_Tower.dir/Game.cpp.o
+.PHONY : Game.cpp.o
 
-Nodo.i: Nodo.cpp.i
+Game.i: Game.cpp.i
 
-.PHONY : Nodo.i
+.PHONY : Game.i
 
 # target to preprocess a source file
-Nodo.cpp.i:
-	$(MAKE) -f CMakeFiles/Spirit_Tower.dir/build.make CMakeFiles/Spirit_Tower.dir/Nodo.cpp.i
-.PHONY : Nodo.cpp.i
+Game.cpp.i:
+	$(MAKE) -f CMakeFiles/Spirit_Tower.dir/build.make CMakeFiles/Spirit_Tower.dir/Game.cpp.i
+.PHONY : Game.cpp.i
 
-Nodo.s: Nodo.cpp.s
+Game.s: Game.cpp.s
 
-.PHONY : Nodo.s
+.PHONY : Game.s
 
 # target to generate assembly for a file
-Nodo.cpp.s:
-	$(MAKE) -f CMakeFiles/Spirit_Tower.dir/build.make CMakeFiles/Spirit_Tower.dir/Nodo.cpp.s
-.PHONY : Nodo.cpp.s
+Game.cpp.s:
+	$(MAKE) -f CMakeFiles/Spirit_Tower.dir/build.make CMakeFiles/Spirit_Tower.dir/Game.cpp.s
+.PHONY : Game.cpp.s
 
-lista.o: lista.cpp.o
+genetico/Espectros.o: genetico/Espectros.cpp.o
 
-.PHONY : lista.o
+.PHONY : genetico/Espectros.o
 
 # target to build an object file
-lista.cpp.o:
-	$(MAKE) -f CMakeFiles/Spirit_Tower.dir/build.make CMakeFiles/Spirit_Tower.dir/lista.cpp.o
-.PHONY : lista.cpp.o
+genetico/Espectros.cpp.o:
+	$(MAKE) -f CMakeFiles/Spirit_Tower.dir/build.make CMakeFiles/Spirit_Tower.dir/genetico/Espectros.cpp.o
+.PHONY : genetico/Espectros.cpp.o
 
-lista.i: lista.cpp.i
+genetico/Espectros.i: genetico/Espectros.cpp.i
 
-.PHONY : lista.i
+.PHONY : genetico/Espectros.i
 
 # target to preprocess a source file
-lista.cpp.i:
-	$(MAKE) -f CMakeFiles/Spirit_Tower.dir/build.make CMakeFiles/Spirit_Tower.dir/lista.cpp.i
-.PHONY : lista.cpp.i
+genetico/Espectros.cpp.i:
+	$(MAKE) -f CMakeFiles/Spirit_Tower.dir/build.make CMakeFiles/Spirit_Tower.dir/genetico/Espectros.cpp.i
+.PHONY : genetico/Espectros.cpp.i
 
-lista.s: lista.cpp.s
+genetico/Espectros.s: genetico/Espectros.cpp.s
 
-.PHONY : lista.s
+.PHONY : genetico/Espectros.s
 
 # target to generate assembly for a file
-lista.cpp.s:
-	$(MAKE) -f CMakeFiles/Spirit_Tower.dir/build.make CMakeFiles/Spirit_Tower.dir/lista.cpp.s
-.PHONY : lista.cpp.s
+genetico/Espectros.cpp.s:
+	$(MAKE) -f CMakeFiles/Spirit_Tower.dir/build.make CMakeFiles/Spirit_Tower.dir/genetico/Espectros.cpp.s
+.PHONY : genetico/Espectros.cpp.s
+
+genetico/Evolucionador.o: genetico/Evolucionador.cpp.o
+
+.PHONY : genetico/Evolucionador.o
+
+# target to build an object file
+genetico/Evolucionador.cpp.o:
+	$(MAKE) -f CMakeFiles/Spirit_Tower.dir/build.make CMakeFiles/Spirit_Tower.dir/genetico/Evolucionador.cpp.o
+.PHONY : genetico/Evolucionador.cpp.o
+
+genetico/Evolucionador.i: genetico/Evolucionador.cpp.i
+
+.PHONY : genetico/Evolucionador.i
+
+# target to preprocess a source file
+genetico/Evolucionador.cpp.i:
+	$(MAKE) -f CMakeFiles/Spirit_Tower.dir/build.make CMakeFiles/Spirit_Tower.dir/genetico/Evolucionador.cpp.i
+.PHONY : genetico/Evolucionador.cpp.i
+
+genetico/Evolucionador.s: genetico/Evolucionador.cpp.s
+
+.PHONY : genetico/Evolucionador.s
+
+# target to generate assembly for a file
+genetico/Evolucionador.cpp.s:
+	$(MAKE) -f CMakeFiles/Spirit_Tower.dir/build.make CMakeFiles/Spirit_Tower.dir/genetico/Evolucionador.cpp.s
+.PHONY : genetico/Evolucionador.cpp.s
 
 main.o: main.cpp.o
 
@@ -258,6 +258,114 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/Spirit_Tower.dir/build.make CMakeFiles/Spirit_Tower.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+path/A_star.o: path/A_star.cpp.o
+
+.PHONY : path/A_star.o
+
+# target to build an object file
+path/A_star.cpp.o:
+	$(MAKE) -f CMakeFiles/Spirit_Tower.dir/build.make CMakeFiles/Spirit_Tower.dir/path/A_star.cpp.o
+.PHONY : path/A_star.cpp.o
+
+path/A_star.i: path/A_star.cpp.i
+
+.PHONY : path/A_star.i
+
+# target to preprocess a source file
+path/A_star.cpp.i:
+	$(MAKE) -f CMakeFiles/Spirit_Tower.dir/build.make CMakeFiles/Spirit_Tower.dir/path/A_star.cpp.i
+.PHONY : path/A_star.cpp.i
+
+path/A_star.s: path/A_star.cpp.s
+
+.PHONY : path/A_star.s
+
+# target to generate assembly for a file
+path/A_star.cpp.s:
+	$(MAKE) -f CMakeFiles/Spirit_Tower.dir/build.make CMakeFiles/Spirit_Tower.dir/path/A_star.cpp.s
+.PHONY : path/A_star.cpp.s
+
+path/Backtracking.o: path/Backtracking.cpp.o
+
+.PHONY : path/Backtracking.o
+
+# target to build an object file
+path/Backtracking.cpp.o:
+	$(MAKE) -f CMakeFiles/Spirit_Tower.dir/build.make CMakeFiles/Spirit_Tower.dir/path/Backtracking.cpp.o
+.PHONY : path/Backtracking.cpp.o
+
+path/Backtracking.i: path/Backtracking.cpp.i
+
+.PHONY : path/Backtracking.i
+
+# target to preprocess a source file
+path/Backtracking.cpp.i:
+	$(MAKE) -f CMakeFiles/Spirit_Tower.dir/build.make CMakeFiles/Spirit_Tower.dir/path/Backtracking.cpp.i
+.PHONY : path/Backtracking.cpp.i
+
+path/Backtracking.s: path/Backtracking.cpp.s
+
+.PHONY : path/Backtracking.s
+
+# target to generate assembly for a file
+path/Backtracking.cpp.s:
+	$(MAKE) -f CMakeFiles/Spirit_Tower.dir/build.make CMakeFiles/Spirit_Tower.dir/path/Backtracking.cpp.s
+.PHONY : path/Backtracking.cpp.s
+
+path/Nodo.o: path/Nodo.cpp.o
+
+.PHONY : path/Nodo.o
+
+# target to build an object file
+path/Nodo.cpp.o:
+	$(MAKE) -f CMakeFiles/Spirit_Tower.dir/build.make CMakeFiles/Spirit_Tower.dir/path/Nodo.cpp.o
+.PHONY : path/Nodo.cpp.o
+
+path/Nodo.i: path/Nodo.cpp.i
+
+.PHONY : path/Nodo.i
+
+# target to preprocess a source file
+path/Nodo.cpp.i:
+	$(MAKE) -f CMakeFiles/Spirit_Tower.dir/build.make CMakeFiles/Spirit_Tower.dir/path/Nodo.cpp.i
+.PHONY : path/Nodo.cpp.i
+
+path/Nodo.s: path/Nodo.cpp.s
+
+.PHONY : path/Nodo.s
+
+# target to generate assembly for a file
+path/Nodo.cpp.s:
+	$(MAKE) -f CMakeFiles/Spirit_Tower.dir/build.make CMakeFiles/Spirit_Tower.dir/path/Nodo.cpp.s
+.PHONY : path/Nodo.cpp.s
+
+path/lista.o: path/lista.cpp.o
+
+.PHONY : path/lista.o
+
+# target to build an object file
+path/lista.cpp.o:
+	$(MAKE) -f CMakeFiles/Spirit_Tower.dir/build.make CMakeFiles/Spirit_Tower.dir/path/lista.cpp.o
+.PHONY : path/lista.cpp.o
+
+path/lista.i: path/lista.cpp.i
+
+.PHONY : path/lista.i
+
+# target to preprocess a source file
+path/lista.cpp.i:
+	$(MAKE) -f CMakeFiles/Spirit_Tower.dir/build.make CMakeFiles/Spirit_Tower.dir/path/lista.cpp.i
+.PHONY : path/lista.cpp.i
+
+path/lista.s: path/lista.cpp.s
+
+.PHONY : path/lista.s
+
+# target to generate assembly for a file
+path/lista.cpp.s:
+	$(MAKE) -f CMakeFiles/Spirit_Tower.dir/build.make CMakeFiles/Spirit_Tower.dir/path/lista.cpp.s
+.PHONY : path/lista.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -267,21 +375,33 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Spirit_Tower"
-	@echo "... A_star.o"
-	@echo "... A_star.i"
-	@echo "... A_star.s"
-	@echo "... Backtracking.o"
-	@echo "... Backtracking.i"
-	@echo "... Backtracking.s"
-	@echo "... Nodo.o"
-	@echo "... Nodo.i"
-	@echo "... Nodo.s"
-	@echo "... lista.o"
-	@echo "... lista.i"
-	@echo "... lista.s"
+	@echo "... Criaturas.o"
+	@echo "... Criaturas.i"
+	@echo "... Criaturas.s"
+	@echo "... Game.o"
+	@echo "... Game.i"
+	@echo "... Game.s"
+	@echo "... genetico/Espectros.o"
+	@echo "... genetico/Espectros.i"
+	@echo "... genetico/Espectros.s"
+	@echo "... genetico/Evolucionador.o"
+	@echo "... genetico/Evolucionador.i"
+	@echo "... genetico/Evolucionador.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... path/A_star.o"
+	@echo "... path/A_star.i"
+	@echo "... path/A_star.s"
+	@echo "... path/Backtracking.o"
+	@echo "... path/Backtracking.i"
+	@echo "... path/Backtracking.s"
+	@echo "... path/Nodo.o"
+	@echo "... path/Nodo.i"
+	@echo "... path/Nodo.s"
+	@echo "... path/lista.o"
+	@echo "... path/lista.i"
+	@echo "... path/lista.s"
 .PHONY : help
 
 

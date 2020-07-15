@@ -70,77 +70,137 @@ CMakeFiles/Spirit_Tower.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Spirit_Tower.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ashley/CLionProjects/Spirit_Tower/main.cpp -o CMakeFiles/Spirit_Tower.dir/main.cpp.s
 
-CMakeFiles/Spirit_Tower.dir/Backtracking.cpp.o: CMakeFiles/Spirit_Tower.dir/flags.make
-CMakeFiles/Spirit_Tower.dir/Backtracking.cpp.o: ../Backtracking.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ashley/CLionProjects/Spirit_Tower/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Spirit_Tower.dir/Backtracking.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Spirit_Tower.dir/Backtracking.cpp.o -c /home/ashley/CLionProjects/Spirit_Tower/Backtracking.cpp
+CMakeFiles/Spirit_Tower.dir/path/Backtracking.cpp.o: CMakeFiles/Spirit_Tower.dir/flags.make
+CMakeFiles/Spirit_Tower.dir/path/Backtracking.cpp.o: ../path/Backtracking.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ashley/CLionProjects/Spirit_Tower/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Spirit_Tower.dir/path/Backtracking.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Spirit_Tower.dir/path/Backtracking.cpp.o -c /home/ashley/CLionProjects/Spirit_Tower/path/Backtracking.cpp
 
-CMakeFiles/Spirit_Tower.dir/Backtracking.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Spirit_Tower.dir/Backtracking.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ashley/CLionProjects/Spirit_Tower/Backtracking.cpp > CMakeFiles/Spirit_Tower.dir/Backtracking.cpp.i
+CMakeFiles/Spirit_Tower.dir/path/Backtracking.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Spirit_Tower.dir/path/Backtracking.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ashley/CLionProjects/Spirit_Tower/path/Backtracking.cpp > CMakeFiles/Spirit_Tower.dir/path/Backtracking.cpp.i
 
-CMakeFiles/Spirit_Tower.dir/Backtracking.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Spirit_Tower.dir/Backtracking.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ashley/CLionProjects/Spirit_Tower/Backtracking.cpp -o CMakeFiles/Spirit_Tower.dir/Backtracking.cpp.s
+CMakeFiles/Spirit_Tower.dir/path/Backtracking.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Spirit_Tower.dir/path/Backtracking.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ashley/CLionProjects/Spirit_Tower/path/Backtracking.cpp -o CMakeFiles/Spirit_Tower.dir/path/Backtracking.cpp.s
 
-CMakeFiles/Spirit_Tower.dir/lista.cpp.o: CMakeFiles/Spirit_Tower.dir/flags.make
-CMakeFiles/Spirit_Tower.dir/lista.cpp.o: ../lista.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ashley/CLionProjects/Spirit_Tower/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Spirit_Tower.dir/lista.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Spirit_Tower.dir/lista.cpp.o -c /home/ashley/CLionProjects/Spirit_Tower/lista.cpp
+CMakeFiles/Spirit_Tower.dir/path/lista.cpp.o: CMakeFiles/Spirit_Tower.dir/flags.make
+CMakeFiles/Spirit_Tower.dir/path/lista.cpp.o: ../path/lista.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ashley/CLionProjects/Spirit_Tower/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Spirit_Tower.dir/path/lista.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Spirit_Tower.dir/path/lista.cpp.o -c /home/ashley/CLionProjects/Spirit_Tower/path/lista.cpp
 
-CMakeFiles/Spirit_Tower.dir/lista.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Spirit_Tower.dir/lista.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ashley/CLionProjects/Spirit_Tower/lista.cpp > CMakeFiles/Spirit_Tower.dir/lista.cpp.i
+CMakeFiles/Spirit_Tower.dir/path/lista.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Spirit_Tower.dir/path/lista.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ashley/CLionProjects/Spirit_Tower/path/lista.cpp > CMakeFiles/Spirit_Tower.dir/path/lista.cpp.i
 
-CMakeFiles/Spirit_Tower.dir/lista.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Spirit_Tower.dir/lista.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ashley/CLionProjects/Spirit_Tower/lista.cpp -o CMakeFiles/Spirit_Tower.dir/lista.cpp.s
+CMakeFiles/Spirit_Tower.dir/path/lista.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Spirit_Tower.dir/path/lista.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ashley/CLionProjects/Spirit_Tower/path/lista.cpp -o CMakeFiles/Spirit_Tower.dir/path/lista.cpp.s
 
-CMakeFiles/Spirit_Tower.dir/Nodo.cpp.o: CMakeFiles/Spirit_Tower.dir/flags.make
-CMakeFiles/Spirit_Tower.dir/Nodo.cpp.o: ../Nodo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ashley/CLionProjects/Spirit_Tower/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Spirit_Tower.dir/Nodo.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Spirit_Tower.dir/Nodo.cpp.o -c /home/ashley/CLionProjects/Spirit_Tower/Nodo.cpp
+CMakeFiles/Spirit_Tower.dir/path/Nodo.cpp.o: CMakeFiles/Spirit_Tower.dir/flags.make
+CMakeFiles/Spirit_Tower.dir/path/Nodo.cpp.o: ../path/Nodo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ashley/CLionProjects/Spirit_Tower/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Spirit_Tower.dir/path/Nodo.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Spirit_Tower.dir/path/Nodo.cpp.o -c /home/ashley/CLionProjects/Spirit_Tower/path/Nodo.cpp
 
-CMakeFiles/Spirit_Tower.dir/Nodo.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Spirit_Tower.dir/Nodo.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ashley/CLionProjects/Spirit_Tower/Nodo.cpp > CMakeFiles/Spirit_Tower.dir/Nodo.cpp.i
+CMakeFiles/Spirit_Tower.dir/path/Nodo.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Spirit_Tower.dir/path/Nodo.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ashley/CLionProjects/Spirit_Tower/path/Nodo.cpp > CMakeFiles/Spirit_Tower.dir/path/Nodo.cpp.i
 
-CMakeFiles/Spirit_Tower.dir/Nodo.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Spirit_Tower.dir/Nodo.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ashley/CLionProjects/Spirit_Tower/Nodo.cpp -o CMakeFiles/Spirit_Tower.dir/Nodo.cpp.s
+CMakeFiles/Spirit_Tower.dir/path/Nodo.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Spirit_Tower.dir/path/Nodo.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ashley/CLionProjects/Spirit_Tower/path/Nodo.cpp -o CMakeFiles/Spirit_Tower.dir/path/Nodo.cpp.s
 
-CMakeFiles/Spirit_Tower.dir/A_star.cpp.o: CMakeFiles/Spirit_Tower.dir/flags.make
-CMakeFiles/Spirit_Tower.dir/A_star.cpp.o: ../A_star.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ashley/CLionProjects/Spirit_Tower/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Spirit_Tower.dir/A_star.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Spirit_Tower.dir/A_star.cpp.o -c /home/ashley/CLionProjects/Spirit_Tower/A_star.cpp
+CMakeFiles/Spirit_Tower.dir/path/A_star.cpp.o: CMakeFiles/Spirit_Tower.dir/flags.make
+CMakeFiles/Spirit_Tower.dir/path/A_star.cpp.o: ../path/A_star.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ashley/CLionProjects/Spirit_Tower/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Spirit_Tower.dir/path/A_star.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Spirit_Tower.dir/path/A_star.cpp.o -c /home/ashley/CLionProjects/Spirit_Tower/path/A_star.cpp
 
-CMakeFiles/Spirit_Tower.dir/A_star.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Spirit_Tower.dir/A_star.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ashley/CLionProjects/Spirit_Tower/A_star.cpp > CMakeFiles/Spirit_Tower.dir/A_star.cpp.i
+CMakeFiles/Spirit_Tower.dir/path/A_star.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Spirit_Tower.dir/path/A_star.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ashley/CLionProjects/Spirit_Tower/path/A_star.cpp > CMakeFiles/Spirit_Tower.dir/path/A_star.cpp.i
 
-CMakeFiles/Spirit_Tower.dir/A_star.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Spirit_Tower.dir/A_star.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ashley/CLionProjects/Spirit_Tower/A_star.cpp -o CMakeFiles/Spirit_Tower.dir/A_star.cpp.s
+CMakeFiles/Spirit_Tower.dir/path/A_star.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Spirit_Tower.dir/path/A_star.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ashley/CLionProjects/Spirit_Tower/path/A_star.cpp -o CMakeFiles/Spirit_Tower.dir/path/A_star.cpp.s
+
+CMakeFiles/Spirit_Tower.dir/genetico/Espectros.cpp.o: CMakeFiles/Spirit_Tower.dir/flags.make
+CMakeFiles/Spirit_Tower.dir/genetico/Espectros.cpp.o: ../genetico/Espectros.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ashley/CLionProjects/Spirit_Tower/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Spirit_Tower.dir/genetico/Espectros.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Spirit_Tower.dir/genetico/Espectros.cpp.o -c /home/ashley/CLionProjects/Spirit_Tower/genetico/Espectros.cpp
+
+CMakeFiles/Spirit_Tower.dir/genetico/Espectros.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Spirit_Tower.dir/genetico/Espectros.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ashley/CLionProjects/Spirit_Tower/genetico/Espectros.cpp > CMakeFiles/Spirit_Tower.dir/genetico/Espectros.cpp.i
+
+CMakeFiles/Spirit_Tower.dir/genetico/Espectros.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Spirit_Tower.dir/genetico/Espectros.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ashley/CLionProjects/Spirit_Tower/genetico/Espectros.cpp -o CMakeFiles/Spirit_Tower.dir/genetico/Espectros.cpp.s
+
+CMakeFiles/Spirit_Tower.dir/genetico/Evolucionador.cpp.o: CMakeFiles/Spirit_Tower.dir/flags.make
+CMakeFiles/Spirit_Tower.dir/genetico/Evolucionador.cpp.o: ../genetico/Evolucionador.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ashley/CLionProjects/Spirit_Tower/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Spirit_Tower.dir/genetico/Evolucionador.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Spirit_Tower.dir/genetico/Evolucionador.cpp.o -c /home/ashley/CLionProjects/Spirit_Tower/genetico/Evolucionador.cpp
+
+CMakeFiles/Spirit_Tower.dir/genetico/Evolucionador.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Spirit_Tower.dir/genetico/Evolucionador.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ashley/CLionProjects/Spirit_Tower/genetico/Evolucionador.cpp > CMakeFiles/Spirit_Tower.dir/genetico/Evolucionador.cpp.i
+
+CMakeFiles/Spirit_Tower.dir/genetico/Evolucionador.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Spirit_Tower.dir/genetico/Evolucionador.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ashley/CLionProjects/Spirit_Tower/genetico/Evolucionador.cpp -o CMakeFiles/Spirit_Tower.dir/genetico/Evolucionador.cpp.s
+
+CMakeFiles/Spirit_Tower.dir/Game.cpp.o: CMakeFiles/Spirit_Tower.dir/flags.make
+CMakeFiles/Spirit_Tower.dir/Game.cpp.o: ../Game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ashley/CLionProjects/Spirit_Tower/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Spirit_Tower.dir/Game.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Spirit_Tower.dir/Game.cpp.o -c /home/ashley/CLionProjects/Spirit_Tower/Game.cpp
+
+CMakeFiles/Spirit_Tower.dir/Game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Spirit_Tower.dir/Game.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ashley/CLionProjects/Spirit_Tower/Game.cpp > CMakeFiles/Spirit_Tower.dir/Game.cpp.i
+
+CMakeFiles/Spirit_Tower.dir/Game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Spirit_Tower.dir/Game.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ashley/CLionProjects/Spirit_Tower/Game.cpp -o CMakeFiles/Spirit_Tower.dir/Game.cpp.s
+
+CMakeFiles/Spirit_Tower.dir/Criaturas.cpp.o: CMakeFiles/Spirit_Tower.dir/flags.make
+CMakeFiles/Spirit_Tower.dir/Criaturas.cpp.o: ../Criaturas.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ashley/CLionProjects/Spirit_Tower/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Spirit_Tower.dir/Criaturas.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Spirit_Tower.dir/Criaturas.cpp.o -c /home/ashley/CLionProjects/Spirit_Tower/Criaturas.cpp
+
+CMakeFiles/Spirit_Tower.dir/Criaturas.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Spirit_Tower.dir/Criaturas.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ashley/CLionProjects/Spirit_Tower/Criaturas.cpp > CMakeFiles/Spirit_Tower.dir/Criaturas.cpp.i
+
+CMakeFiles/Spirit_Tower.dir/Criaturas.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Spirit_Tower.dir/Criaturas.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ashley/CLionProjects/Spirit_Tower/Criaturas.cpp -o CMakeFiles/Spirit_Tower.dir/Criaturas.cpp.s
 
 # Object files for target Spirit_Tower
 Spirit_Tower_OBJECTS = \
 "CMakeFiles/Spirit_Tower.dir/main.cpp.o" \
-"CMakeFiles/Spirit_Tower.dir/Backtracking.cpp.o" \
-"CMakeFiles/Spirit_Tower.dir/lista.cpp.o" \
-"CMakeFiles/Spirit_Tower.dir/Nodo.cpp.o" \
-"CMakeFiles/Spirit_Tower.dir/A_star.cpp.o"
+"CMakeFiles/Spirit_Tower.dir/path/Backtracking.cpp.o" \
+"CMakeFiles/Spirit_Tower.dir/path/lista.cpp.o" \
+"CMakeFiles/Spirit_Tower.dir/path/Nodo.cpp.o" \
+"CMakeFiles/Spirit_Tower.dir/path/A_star.cpp.o" \
+"CMakeFiles/Spirit_Tower.dir/genetico/Espectros.cpp.o" \
+"CMakeFiles/Spirit_Tower.dir/genetico/Evolucionador.cpp.o" \
+"CMakeFiles/Spirit_Tower.dir/Game.cpp.o" \
+"CMakeFiles/Spirit_Tower.dir/Criaturas.cpp.o"
 
 # External object files for target Spirit_Tower
 Spirit_Tower_EXTERNAL_OBJECTS =
 
 Spirit_Tower: CMakeFiles/Spirit_Tower.dir/main.cpp.o
-Spirit_Tower: CMakeFiles/Spirit_Tower.dir/Backtracking.cpp.o
-Spirit_Tower: CMakeFiles/Spirit_Tower.dir/lista.cpp.o
-Spirit_Tower: CMakeFiles/Spirit_Tower.dir/Nodo.cpp.o
-Spirit_Tower: CMakeFiles/Spirit_Tower.dir/A_star.cpp.o
+Spirit_Tower: CMakeFiles/Spirit_Tower.dir/path/Backtracking.cpp.o
+Spirit_Tower: CMakeFiles/Spirit_Tower.dir/path/lista.cpp.o
+Spirit_Tower: CMakeFiles/Spirit_Tower.dir/path/Nodo.cpp.o
+Spirit_Tower: CMakeFiles/Spirit_Tower.dir/path/A_star.cpp.o
+Spirit_Tower: CMakeFiles/Spirit_Tower.dir/genetico/Espectros.cpp.o
+Spirit_Tower: CMakeFiles/Spirit_Tower.dir/genetico/Evolucionador.cpp.o
+Spirit_Tower: CMakeFiles/Spirit_Tower.dir/Game.cpp.o
+Spirit_Tower: CMakeFiles/Spirit_Tower.dir/Criaturas.cpp.o
 Spirit_Tower: CMakeFiles/Spirit_Tower.dir/build.make
 Spirit_Tower: CMakeFiles/Spirit_Tower.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ashley/CLionProjects/Spirit_Tower/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Spirit_Tower"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ashley/CLionProjects/Spirit_Tower/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable Spirit_Tower"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Spirit_Tower.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

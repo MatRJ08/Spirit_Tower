@@ -1,12 +1,16 @@
 #include <iostream>
-#include "Backtracking.h"
-#include "A_star.h"
+#include "path/Backtracking.h"
+#include "path/A_star.h"
+#include "genetico/Evolucionador.h"
+#include "genetico/Espectros.h"
+#include "Game.h"
 
 
 using namespace std;
 
 typedef pair<int, int> Pair;
 typedef pair<double, pair<int, int>> pPair;
+
 
 
 int backtracking_test(){
@@ -38,8 +42,11 @@ int A_star_test(){
 
 int main(int argc, char *argv[]){
 
-    backtracking_test();
-    A_star_test();
+    //backtracking_test();
+    //A_star_test();
+    Game* m = new Game();
+    m->generar_gen();
+
 
     return 0;
 }

@@ -84,31 +84,55 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/ashley/CLionProjects/Spirit_Tower/A_star.cpp">
+		<Unit filename="/home/ashley/CLionProjects/Spirit_Tower/Criaturas.cpp">
 			<Option target="Spirit_Tower"/>
 		</Unit>
-		<Unit filename="/home/ashley/CLionProjects/Spirit_Tower/A_star.h">
+		<Unit filename="/home/ashley/CLionProjects/Spirit_Tower/Criaturas.h">
 			<Option target="Spirit_Tower"/>
 		</Unit>
-		<Unit filename="/home/ashley/CLionProjects/Spirit_Tower/Backtracking.cpp">
+		<Unit filename="/home/ashley/CLionProjects/Spirit_Tower/Game.cpp">
 			<Option target="Spirit_Tower"/>
 		</Unit>
-		<Unit filename="/home/ashley/CLionProjects/Spirit_Tower/Backtracking.h">
+		<Unit filename="/home/ashley/CLionProjects/Spirit_Tower/Game.h">
 			<Option target="Spirit_Tower"/>
 		</Unit>
-		<Unit filename="/home/ashley/CLionProjects/Spirit_Tower/Nodo.cpp">
+		<Unit filename="/home/ashley/CLionProjects/Spirit_Tower/genetico/Espectros.cpp">
 			<Option target="Spirit_Tower"/>
 		</Unit>
-		<Unit filename="/home/ashley/CLionProjects/Spirit_Tower/Nodo.h">
+		<Unit filename="/home/ashley/CLionProjects/Spirit_Tower/genetico/Espectros.h">
 			<Option target="Spirit_Tower"/>
 		</Unit>
-		<Unit filename="/home/ashley/CLionProjects/Spirit_Tower/lista.cpp">
+		<Unit filename="/home/ashley/CLionProjects/Spirit_Tower/genetico/Evolucionador.cpp">
 			<Option target="Spirit_Tower"/>
 		</Unit>
-		<Unit filename="/home/ashley/CLionProjects/Spirit_Tower/lista.h">
+		<Unit filename="/home/ashley/CLionProjects/Spirit_Tower/genetico/Evolucionador.h">
 			<Option target="Spirit_Tower"/>
 		</Unit>
 		<Unit filename="/home/ashley/CLionProjects/Spirit_Tower/main.cpp">
+			<Option target="Spirit_Tower"/>
+		</Unit>
+		<Unit filename="/home/ashley/CLionProjects/Spirit_Tower/path/A_star.cpp">
+			<Option target="Spirit_Tower"/>
+		</Unit>
+		<Unit filename="/home/ashley/CLionProjects/Spirit_Tower/path/A_star.h">
+			<Option target="Spirit_Tower"/>
+		</Unit>
+		<Unit filename="/home/ashley/CLionProjects/Spirit_Tower/path/Backtracking.cpp">
+			<Option target="Spirit_Tower"/>
+		</Unit>
+		<Unit filename="/home/ashley/CLionProjects/Spirit_Tower/path/Backtracking.h">
+			<Option target="Spirit_Tower"/>
+		</Unit>
+		<Unit filename="/home/ashley/CLionProjects/Spirit_Tower/path/Nodo.cpp">
+			<Option target="Spirit_Tower"/>
+		</Unit>
+		<Unit filename="/home/ashley/CLionProjects/Spirit_Tower/path/Nodo.h">
+			<Option target="Spirit_Tower"/>
+		</Unit>
+		<Unit filename="/home/ashley/CLionProjects/Spirit_Tower/path/lista.cpp">
+			<Option target="Spirit_Tower"/>
+		</Unit>
+		<Unit filename="/home/ashley/CLionProjects/Spirit_Tower/path/lista.h">
 			<Option target="Spirit_Tower"/>
 		</Unit>
 		<Unit filename="/home/ashley/CLionProjects/Spirit_Tower/CMakeLists.txt">

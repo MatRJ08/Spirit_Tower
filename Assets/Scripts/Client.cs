@@ -9,8 +9,9 @@ using UnityEngine.SceneManagement;
 
 public class Client : MonoBehaviour
 {
-    [SerializeField] private Transform[] enemies;
-    public GameObject player;
+    //[SerializeField] 
+    private Transform[] enemies=new Transform[3];
+    private GameObject player;
     private TcpClient socket;
     private Thread clientReceiveThread;
     private string delimiter = "~";
@@ -20,7 +21,6 @@ public class Client : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(player);
         DontDestroyOnLoad(gameObject);
         if (instance == null)
         {
@@ -39,49 +39,43 @@ public class Client : MonoBehaviour
     {
         
         ConnectToTcpServer();
-        
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        print("enmiName " + enemies[0].name);
-        int piso = player.GetComponent<Player_Movement>().Piso;
-        if (enemies[0] == null)
-        {
-            print("Player");
-            player = GameObject.Find("PlayerSprite");
-        }
         if (player == null)
         {
             print("enemies");
-            switch (piso)
+            print("SCENE: "+ SceneManager.GetActiveScene().name);
+            switch (SceneManager.GetActiveScene().name)
             {
-                case 0:
-                    enemies[0] = transform.Find("Gray_Enemy1");
-                    enemies[1] = transform.Find("Gray_Enemy2");
-                    enemies[2] = transform.Find("Gray_Enemy3");
+                case "Dungeon1":
+                    print(enemies[0] );
+                    enemies[0] = GameObject.Find("Gray_Enemy1").transform;
+                    enemies[1] = GameObject.Find("Gray_Enemy2").transform;
+                    enemies[2] = GameObject.Find("Gray_Enemy3").transform;
                     break;
-                case 1:
-                    enemies[0] = transform.Find("Red_Enemy1");
-                    enemies[1] = transform.Find("Red_Enemy2");
-                    enemies[2] = transform.Find("Red_Enemy3");
+                case "Dungeon2":
+                    enemies[0] = GameObject.Find("Red_Enemy1").transform;
+                    enemies[1] = GameObject.Find("Red_Enemy2").transform;
+                    enemies[2] = GameObject.Find("Red_Enemy3").transform;
                     break;
-                case 2:
-                    enemies[0] = transform.Find("Blue_Enemy1");
-                    enemies[1] = transform.Find("Blue_Enemy2");
-                    enemies[2] = transform.Find("Blue_Enemy3");
+                case "Dungeon3":
+                    enemies[0] = GameObject.Find("Blue_Enemy1").transform;
+                    enemies[1] = GameObject.Find("Blue_Enemy2").transform;
+                    enemies[2] = GameObject.Find("Blue_Enemy3").transform;
                     break;
-                case 3:
-                    enemies[0] = transform.Find("Red_Enemy1");
-                    enemies[1] = transform.Find("Red_Enemy2");
-                    enemies[2] = transform.Find("Red_Enemy3");
+                case "Dungeon4":
+                    enemies[0] = GameObject.Find("Red_Enemy1").transform;
+                    enemies[1] = GameObject.Find("Red_Enemy2").transform;
+                    enemies[2] = GameObject.Find("Red_Enemy3").transform;
                     break;
 
             }
             
         }
+        player = GameObject.Find("PlayerSprite");
         handleIncomingData();
     }
 

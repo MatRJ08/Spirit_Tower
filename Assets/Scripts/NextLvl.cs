@@ -7,8 +7,6 @@ public class NextLvl : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        print("COLLISION: "+collision.name);
-        print("SCENE: " + SceneManager.GetActiveScene().name);
         if (collision.name == "PlayerSprite")
         {
             switch (SceneManager.GetActiveScene().name)

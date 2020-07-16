@@ -52,7 +52,10 @@ public class Player_Movement : MonoBehaviour
         
        
     }
-
+    public int getPiso()
+    {
+        return Piso;
+    }
     private void FixedUpdate()
     {
         Client.instance.SendData("PISO|"+ Piso);

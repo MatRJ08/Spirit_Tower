@@ -30,18 +30,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="482a55b5-0a94-4d88-9e2b-83fc437045f6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Assets/Scenes/Dungeon1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scenes/Dungeon1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Scenes/Dungeon2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scenes/Dungeon2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Scenes/Dungeon3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scenes/Dungeon3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/Player_Movement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scripts/Player_Movement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/Client.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scripts/Client.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpiritTower.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpiritTower.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpiritTower.dir/src/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpiritTower.dir/src/main.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpiritTower.dir/src/server.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpiritTower.dir/src/server.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/SpiritTower.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/SpiritTower.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +98,8 @@
       <workItem from="1594744957362" duration="10573000" />
       <workItem from="1594773467154" duration="1528000" />
       <workItem from="1594797329361" duration="5194000" />
-      <workItem from="1594875530413" duration="7997000" />
+      <workItem from="1594875530413" duration="8546000" />
+      <workItem from="1594929709109" duration="3181000" />
     </task>
     <servers />
   </component>
@@ -142,34 +133,34 @@
     <state x="548" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1592458327773" />
     <state x="548" y="167" key="FileChooserDialogImpl/1920.7.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1594797521299" />
     <state x="2468" y="174" key="FileChooserDialogImpl/1920.7.1536.824/0.0.1536.824@1920.7.1536.824" timestamp="1594773802714" />
-    <state width="1493" height="343" key="GridCell.Tab.0.bottom" timestamp="1594883951508">
-      <screen x="1920" y="7" width="1536" height="824" />
+    <state width="481" height="118" key="GridCell.Tab.0.bottom" timestamp="1594933438748">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1322" height="192" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1594017317811" />
     <state width="1024" height="251" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1593825191267" />
-    <state width="1493" height="161" key="GridCell.Tab.0.bottom/1920.7.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1594802642201" />
-    <state width="1493" height="343" key="GridCell.Tab.0.bottom/1920.7.1536.824/0.0.1536.824@1920.7.1536.824" timestamp="1594883951508" />
-    <state width="1493" height="343" key="GridCell.Tab.0.center" timestamp="1594883951508">
-      <screen x="1920" y="7" width="1536" height="824" />
+    <state width="481" height="118" key="GridCell.Tab.0.bottom/1920.7.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1594933438748" />
+    <state width="723" height="118" key="GridCell.Tab.0.bottom/1920.7.1536.824/0.0.1536.824@1920.7.1536.824" timestamp="1594932601549" />
+    <state width="481" height="118" key="GridCell.Tab.0.center" timestamp="1594933438748">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1322" height="192" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1594017317811" />
     <state width="1024" height="251" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1593825191267" />
-    <state width="1493" height="161" key="GridCell.Tab.0.center/1920.7.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1594802642201" />
-    <state width="1493" height="343" key="GridCell.Tab.0.center/1920.7.1536.824/0.0.1536.824@1920.7.1536.824" timestamp="1594883951508" />
-    <state width="1493" height="343" key="GridCell.Tab.0.left" timestamp="1594883951508">
-      <screen x="1920" y="7" width="1536" height="824" />
+    <state width="481" height="118" key="GridCell.Tab.0.center/1920.7.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1594933438748" />
+    <state width="723" height="118" key="GridCell.Tab.0.center/1920.7.1536.824/0.0.1536.824@1920.7.1536.824" timestamp="1594932601549" />
+    <state width="481" height="118" key="GridCell.Tab.0.left" timestamp="1594933438748">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1322" height="192" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1594017317811" />
     <state width="1024" height="251" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1593825191267" />
-    <state width="1493" height="161" key="GridCell.Tab.0.left/1920.7.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1594802642201" />
-    <state width="1493" height="343" key="GridCell.Tab.0.left/1920.7.1536.824/0.0.1536.824@1920.7.1536.824" timestamp="1594883951508" />
-    <state width="1493" height="343" key="GridCell.Tab.0.right" timestamp="1594883951508">
-      <screen x="1920" y="7" width="1536" height="824" />
+    <state width="481" height="118" key="GridCell.Tab.0.left/1920.7.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1594933438748" />
+    <state width="723" height="118" key="GridCell.Tab.0.left/1920.7.1536.824/0.0.1536.824@1920.7.1536.824" timestamp="1594932601549" />
+    <state width="481" height="118" key="GridCell.Tab.0.right" timestamp="1594933438748">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1322" height="192" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1594017317811" />
     <state width="1024" height="251" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1593825191267" />
-    <state width="1493" height="161" key="GridCell.Tab.0.right/1920.7.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1594802642201" />
-    <state width="1493" height="343" key="GridCell.Tab.0.right/1920.7.1536.824/0.0.1536.824@1920.7.1536.824" timestamp="1594883951508" />
+    <state width="481" height="118" key="GridCell.Tab.0.right/1920.7.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1594933438748" />
+    <state width="723" height="118" key="GridCell.Tab.0.right/1920.7.1536.824/0.0.1536.824@1920.7.1536.824" timestamp="1594932601549" />
     <state x="144" y="57" width="1156" height="709" key="SettingsEditor" timestamp="1592607998056">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

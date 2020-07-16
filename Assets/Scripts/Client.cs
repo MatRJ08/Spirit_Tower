@@ -5,6 +5,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Client : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class Client : MonoBehaviour
 
     private void Awake()
     {
+        DontDestroyOnLoad(player);
+        DontDestroyOnLoad(gameObject);
         if (instance == null)
         {
             instance = this;
@@ -34,15 +37,52 @@ public class Client : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         ConnectToTcpServer();
+        
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        handleIncomingData();
+        print("enmiName " + enemies[0].name);
+        int piso = player.GetComponent<Player_Movement>().Piso;
+        if (enemies[0] == null)
+        {
+            print("Player");
+            player = GameObject.Find("PlayerSprite");
+        }
+        if (player == null)
+        {
+            print("enemies");
+            switch (piso)
+            {
+                case 0:
+                    enemies[0] = transform.Find("Gray_Enemy1");
+                    enemies[1] = transform.Find("Gray_Enemy2");
+                    enemies[2] = transform.Find("Gray_Enemy3");
+                    break;
+                case 1:
+                    enemies[0] = transform.Find("Red_Enemy1");
+                    enemies[1] = transform.Find("Red_Enemy2");
+                    enemies[2] = transform.Find("Red_Enemy3");
+                    break;
+                case 2:
+                    enemies[0] = transform.Find("Blue_Enemy1");
+                    enemies[1] = transform.Find("Blue_Enemy2");
+                    enemies[2] = transform.Find("Blue_Enemy3");
+                    break;
+                case 3:
+                    enemies[0] = transform.Find("Red_Enemy1");
+                    enemies[1] = transform.Find("Red_Enemy2");
+                    enemies[2] = transform.Find("Red_Enemy3");
+                    break;
 
+            }
+            
+        }
+        handleIncomingData();
     }
 
     // Inicializar thread para recibir mensajes del servidor
@@ -136,6 +176,7 @@ public class Client : MonoBehaviour
 
             if (dataToHandle[0] == "DAT")
             {
+                
                 if(dataToHandle[1]== "V_RUTA")
                 {
                     if (dataToHandle[2] == "0")

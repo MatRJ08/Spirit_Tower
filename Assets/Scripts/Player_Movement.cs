@@ -2,8 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-
+using UnityEngine.SceneManagement;
 
 public class Player_Movement : MonoBehaviour
 {
@@ -11,7 +10,7 @@ public class Player_Movement : MonoBehaviour
     public Transform movePoint;
     public Animator animator;
     Vector2 movement;
-    private int Piso;
+    public int Piso;
 
     public LayerMask stopMovement;
 
@@ -25,7 +24,23 @@ public class Player_Movement : MonoBehaviour
 
     private void Update()
     {
-        Client.instance.SendData("PISO|" + Piso);
+        
+        switch (SceneManager.GetActiveScene().name)
+        {
+            case "Dungeon1":
+                Piso = 0;
+                break;
+            case "Dungeon2":
+                Piso = 1;
+                break;
+            case "Dungeon3":
+                Piso = 2;
+                break;
+            case "Dungeon4":
+                Piso = 3;
+                break;
+
+        }
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         animator.SetFloat("Horizontal", movement.x);
@@ -34,11 +49,14 @@ public class Player_Movement : MonoBehaviour
 
 
         Client.instance.SendData("UPDATE|PLAYER|X:" + Math.Round(transform.position.x) + ",Y:" + Math.Round(transform.position.y) + ";HP:" + Math.Round(GetComponent<recieve_Damage>().health));
-
+        
+       
     }
 
     private void FixedUpdate()
     {
+        Client.instance.SendData("PISO|"+ Piso);
+        
         transform.position = Vector3.MoveTowards(transform.position, movePoint.position, moveSpeed * Time.deltaTime);
         if (Vector3.Distance(transform.position, movePoint.position) <= .05f)
         {
@@ -61,12 +79,6 @@ public class Player_Movement : MonoBehaviour
 
             }
         }
-
-
-    }
-    private void OnLevelWasLoaded(int level)
-    {
-        Piso = level;
     }
 
 }

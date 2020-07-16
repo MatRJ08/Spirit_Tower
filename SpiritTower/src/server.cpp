@@ -2,9 +2,7 @@
 #include <sstream>
 #include "Game.h"
 float Datos[3];
-bool b=false;
-bool p =true;
-int PISO;
+int PISO=20;
 Server::Server(){
 }
 
@@ -31,69 +29,77 @@ Server* Server::getInstance() {
  * el servidor.
  * @param message - Mensaje recibido por sockets
  */
-void Server::readMessage(std::string message){
-    if(b){
-        for (int j = 0; j <3 ; ++j) {
-            switch (PISO) {
-                case 0:
-                    Datos[0] = G->generar_gen()[j].get_vel_ruta();
-                    sendMessage("DAT|V_RUTA|"+ std::to_string(j) + "|" + std::to_string(Datos[0]));
+void Server::sendStats(int piso) {
+    std::cout<<"SEND STATS       PISO: "<<piso<<std::endl;
+    PISO=piso;
+    for (int j = 0; j <3 ; ++j) {
+        switch (piso) {
+            case 0:
+                std::cout<<"CASE 0 "<<std::endl;
+                Datos[0] = G->generar_gen()[j].get_vel_ruta();
+                sendMessage("DAT|V_RUTA|"+ std::to_string(j) + "|" + std::to_string(Datos[0]));
 
-                    Datos[1] = G->generar_gen()[j].get_vel_persecucion();
-                    sendMessage("DAT|V_PER|"+ std::to_string(j) + "|" + std::to_string(Datos[1]));
+                Datos[1] = G->generar_gen()[j].get_vel_persecucion();
+                sendMessage("DAT|V_PER|"+ std::to_string(j) + "|" + std::to_string(Datos[1]));
 
-                    Datos[2] = G->generar_gen()[j].get_vision();
-                    sendMessage("DAT|RADIO|"+ std::to_string(j) + "|" + std::to_string(Datos[2]));
+                Datos[2] = G->generar_gen()[j].get_vision();
+                sendMessage("DAT|RADIO|"+ std::to_string(j) + "|" + std::to_string(Datos[2]));
 
-                    break;
-                case 1:
-                    Datos[0] = G->generar_gen2()[j].get_vel_ruta();
-                    sendMessage("DAT|V_RUTA|"+ std::to_string(j) + "|" + std::to_string(Datos[0]));
+                break;
+            case 1:
+                std::cout<<"CASE 1 "<<std::endl;
+                Datos[0] = G->generar_gen2()[j].get_vel_ruta();
+                sendMessage("DAT|V_RUTA|"+ std::to_string(j) + "|" + std::to_string(Datos[0]));
 
-                    Datos[1] = G->generar_gen2()[j].get_vel_persecucion();
-                    sendMessage("DAT|V_PER|"+ std::to_string(j) + "|" + std::to_string(Datos[1]));
+                Datos[1] = G->generar_gen2()[j].get_vel_persecucion();
+                sendMessage("DAT|V_PER|"+ std::to_string(j) + "|" + std::to_string(Datos[1]));
 
-                    Datos[2] = G->generar_gen2()[j].get_vision();
-                    sendMessage("DAT|RADIO|"+ std::to_string(j) + "|" + std::to_string(Datos[2]));
+                Datos[2] = G->generar_gen2()[j].get_vision();
+                sendMessage("DAT|RADIO|"+ std::to_string(j) + "|" + std::to_string(Datos[2]));
 
-                    break;
-                case 2:
-                    Datos[0] = G->generar_gen3()[j].get_vel_ruta();
-                    sendMessage("DAT|V_RUTA|"+ std::to_string(j) + "|" + std::to_string(Datos[0]));
+                break;
+            case 2:
+                std::cout<<"CASE 2 "<<std::endl;
+                Datos[0] = G->generar_gen3()[j].get_vel_ruta();
+                sendMessage("DAT|V_RUTA|"+ std::to_string(j) + "|" + std::to_string(Datos[0]));
 
-                    Datos[1] = G->generar_gen3()[j].get_vel_persecucion();
-                    sendMessage("DAT|V_PER|"+ std::to_string(j) + "|" + std::to_string(Datos[1]));
+                Datos[1] = G->generar_gen3()[j].get_vel_persecucion();
+                sendMessage("DAT|V_PER|"+ std::to_string(j) + "|" + std::to_string(Datos[1]));
 
-                    Datos[2] = G->generar_gen3()[j].get_vision();
-                    sendMessage("DAT|RADIO|"+ std::to_string(j) + "|" + std::to_string(Datos[2]));
+                Datos[2] = G->generar_gen3()[j].get_vision();
+                sendMessage("DAT|RADIO|"+ std::to_string(j) + "|" + std::to_string(Datos[2]));
 
-                    break;
-                case 3:
-                    Datos[0] = G->generar_gen3()->get_vel_ruta();
-                    sendMessage("DAT|V_RUTA|"+ std::to_string(j) + "|" + std::to_string(Datos[0]));
+                break;
+            case 3:
+                std::cout<<"CASE 3 "<<std::endl;
+                Datos[0] = G->generar_gen3()->get_vel_ruta();
+                sendMessage("DAT|V_RUTA|"+ std::to_string(j) + "|" + std::to_string(Datos[0]));
 
-                    Datos[1] = G->generar_gen3()->get_vel_persecucion();
-                    sendMessage("DAT|V_PER|"+ std::to_string(j) + "|" + std::to_string(Datos[1]));
+                Datos[1] = G->generar_gen3()->get_vel_persecucion();
+                sendMessage("DAT|V_PER|"+ std::to_string(j) + "|" + std::to_string(Datos[1]));
 
-                    Datos[2] = G->generar_gen3()->get_vision();
-                    sendMessage("DAT|RADIO|"+ std::to_string(j) + "|" + std::to_string(Datos[2]));
+                Datos[2] = G->generar_gen3()->get_vision();
+                sendMessage("DAT|RADIO|"+ std::to_string(j) + "|" + std::to_string(Datos[2]));
 
-                    break;
-            }
+                break;
         }
-        b=false;
     }
+}
+void Server::readMessage(std::string message){
     std::string delimiter = "|";
     // UPDATE|PLAYER|X:00,Y:00;HP:00
-    if(p) {
-        if (message.substr(0, message.find(delimiter)) == "PISO") {
-            message = message.substr(message.find(delimiter) + 1, message.size() - 1);
-            PISO = std::stoi(message);
-            p=false;
-            b=true;
+    if (message.substr(0, message.find(delimiter)) == "PISO") {
+        message = message.substr(message.find(delimiter) + 1, message.size() - 1);
+        stringstream p (message);
+        int piso=0;
+        p>>piso;
+        if(piso!=PISO) {
+            sendStats(piso);
+            PISO=piso;
         }
-
     }
+
+
     if (message.substr(0,message.find(delimiter)) == "UPDATE"){
         message = message.substr(message.find(delimiter)+1,message.size()-1);
 

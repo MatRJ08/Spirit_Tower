@@ -23,6 +23,7 @@ public:
     void readMessage(std::string message);
     void sendMessage(std::string message);
     void readBuffer(std::string buffer);
+    void sendStats(int piso);
 
 private:
     static Server* instance;

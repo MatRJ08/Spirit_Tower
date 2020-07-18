@@ -27,9 +27,10 @@ public class Enemy_Attack : MonoBehaviour
     public bool isIn = false;
     public bool b = true;
     Vector3 aimDir;
+    private Transform Raton;
     void Start()
     {
-        //enemyRef = Resources.Load("Dungeon1/Gray_Enemy1");
+        Raton = GameObject.Find("Raton").transform;
         enemyRef = Resources.Load(enemyRefName);
         Player = GameObject.Find("PlayerSprite");
         currentHealth = maxHealth;
@@ -52,7 +53,12 @@ public class Enemy_Attack : MonoBehaviour
         {
             TakeDamage(maxHealth);
         }
-      
+      if(Mathf.Abs(Raton.transform.position.x - transform.position.x) < viewDistance && Mathf.Abs(Raton.transform.position.y - transform.position.y) < viewDistance)
+        {
+            gameObject.GetComponent<Enemy_Patrol>().speed = 0;
+        }
+        else { gameObject.GetComponent<Enemy_Patrol>().speed = gameObject.GetComponent<Enemy_Patrol>().normalSpeed; }
+
         if (Mathf.Abs(Player.transform.position.x - transform.position.x) < viewDistance && Mathf.Abs(Player.transform.position.y - transform.position.y) < viewDistance)
         {
             Collider2D[] hit = Physics2D.OverlapCircleAll(EnemyInstaKill.position, EIKRange);

@@ -6,6 +6,7 @@ using UnityEngine;
 public class Enemy_Patrol : MonoBehaviour
 {
     public float speed;//Velocidad de movimiento
+    public float normalSpeed;
     public float runSpeed;
     private float waitTime; //Tienpo de espera en cada punto
     public float startWaitTime; //Tiempo maximo de espera
@@ -14,10 +15,13 @@ public class Enemy_Patrol : MonoBehaviour
     private Transform Player;
     private Vector3 lastMoveDir;
     private Vector3 spotDir;
+    
 
 
     void Start()
     {
+        normalSpeed = speed;
+        print("NSPEED " + normalSpeed);
         spot = 0;
         waitTime = startWaitTime;
         spotDir = (moveSpots[spot].position - transform.position).normalized;

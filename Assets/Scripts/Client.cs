@@ -170,7 +170,7 @@ public class Client : MonoBehaviour
 
             if (dataToHandle[0] == "DAT")
             {
-                
+                print("STATS RECV");   
                 if(dataToHandle[1]== "V_RUTA")
                 {
                     if (dataToHandle[2] == "0")
@@ -179,6 +179,8 @@ public class Client : MonoBehaviour
                         decimal.TryParse(dataToHandle[3], out ruta);
                         ruta = Math.Round(ruta, 2);
                         enemies[0].GetComponent<Enemy_Attack>().GetComponent<Enemy_Patrol>().speed= Convert.ToSingle(ruta);
+                        enemies[0].GetComponent<Enemy_Attack>().GetComponent<Enemy_Patrol>().normalSpeed = Convert.ToSingle(ruta);
+                        print("SPEED REC 1 "+ enemies[0].GetComponent<Enemy_Attack>().GetComponent<Enemy_Patrol>().speed);
                         
                     }
                     if (dataToHandle[2] == "1")
@@ -187,6 +189,7 @@ public class Client : MonoBehaviour
                         decimal.TryParse(dataToHandle[3], out ruta);
                         ruta = Math.Round(ruta, 2);
                         enemies[1].GetComponent<Enemy_Attack>().GetComponent<Enemy_Patrol>().speed = Convert.ToSingle(ruta);
+                        enemies[1].GetComponent<Enemy_Attack>().GetComponent<Enemy_Patrol>().normalSpeed = Convert.ToSingle(ruta);
                     }
                     if (dataToHandle[2] == "2")
                     {
@@ -194,6 +197,7 @@ public class Client : MonoBehaviour
                         decimal.TryParse(dataToHandle[3], out ruta);
                         ruta = Math.Round(ruta, 2);
                         enemies[2].GetComponent<Enemy_Attack>().GetComponent<Enemy_Patrol>().speed = Convert.ToSingle(ruta);
+                        enemies[2].GetComponent<Enemy_Attack>().GetComponent<Enemy_Patrol>().normalSpeed = Convert.ToSingle(ruta);
                     }
 
 

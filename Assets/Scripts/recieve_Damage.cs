@@ -93,23 +93,32 @@ public class recieve_Damage : MonoBehaviour
     {
         for (int i = 0; i < enemies.Length; i++)
         {
-            if (enemies[i] == null)
+            if (enemies[i].name == "Chuchu")
             {
-
-                UnityEngine.Object enemyRef = Resources.Load(enemiesRefName[i]);
-                GameObject enemyClone = (GameObject)Instantiate(enemyRef);
-                Enemy_Patrol patrol = enemyClone.GetComponent<Enemy_Patrol>();
-                enemyClone.transform.position = patrol.moveSpots[0].position;
-                enemies[i] = enemyClone.transform;
+                enemies[i].position = enemies[i].GetComponent<chuchuAtack>().initPos;
+                enemies[i].GetComponent<chuchuAtack>().currentHealth = enemies[i].GetComponent<chuchuAtack>().maxHealth;
             }
             else
             {
-                
-                Enemy_Patrol patrol = enemies[i].GetComponent<Enemy_Patrol>();
-                enemies[i].transform.position = patrol.moveSpots[0].position;
+                if (enemies[i] == null)
+                {
 
+                    UnityEngine.Object enemyRef = Resources.Load(enemiesRefName[i]);
+                    GameObject enemyClone = (GameObject)Instantiate(enemyRef);
+                    Enemy_Patrol patrol = enemyClone.GetComponent<Enemy_Patrol>();
+                    enemyClone.transform.position = patrol.moveSpots[0].position;
+                    enemies[i] = enemyClone.transform;
+                }
+                else
+                {
+
+                    Enemy_Patrol patrol = enemies[i].GetComponent<Enemy_Patrol>();
+                    enemies[i].transform.position = patrol.moveSpots[0].position;
+
+                }
+
+                enemies[i].GetComponent<Enemy_Attack>().b = true;
             }
-            enemies[i].GetComponent<Enemy_Attack>().b = true;
         }
     }
 }

@@ -30,13 +30,21 @@ public class Player_Attack : MonoBehaviour
         
         foreach (Collider2D enemy in hitEnemies)
         {
-           
-            if (enemy.GetComponent<Enemy_Attack>().isIn)
+            if (enemy.name == "Chuchu")
             {
-                enemy.GetComponent<Enemy_Attack>().TakeDamage(enemy.GetComponent<Enemy_Attack>().maxHealth*2);            }
+                enemy.GetComponent<chuchuAtack>().TakeDamage(attackDamage);
+            }
             else
             {
-                enemy.GetComponent<Enemy_Attack>().TakeDamage(attackDamage);
+
+                if (enemy.GetComponent<Enemy_Attack>().isIn)
+                {
+                    enemy.GetComponent<Enemy_Attack>().TakeDamage(enemy.GetComponent<Enemy_Attack>().maxHealth * 2);
+                }
+                else
+                {
+                    enemy.GetComponent<Enemy_Attack>().TakeDamage(attackDamage);
+                }
             }
         }
     }

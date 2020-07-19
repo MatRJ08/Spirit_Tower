@@ -21,7 +21,6 @@ public class Enemy_Patrol : MonoBehaviour
     void Start()
     {
         normalSpeed = speed;
-        print("NSPEED " + normalSpeed);
         spot = 0;
         waitTime = startWaitTime;
         spotDir = (moveSpots[spot].position - transform.position).normalized;

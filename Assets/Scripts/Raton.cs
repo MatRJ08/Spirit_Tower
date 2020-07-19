@@ -20,6 +20,7 @@ public class Raton : MonoBehaviour
     {
         print("PEGA");
         transform.position = Vector2.MoveTowards(transform.position, ratonSpots[ant].position, 5f * Time.deltaTime);
+        i = Random.Range(0, ratonSpots.Length - 1);
     }
     // Update is called once per frame
     void Update()

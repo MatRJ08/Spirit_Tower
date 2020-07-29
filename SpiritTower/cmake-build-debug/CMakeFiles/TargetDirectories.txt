@@ -1,0 +1,3 @@
+D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/cmake-build-debug/CMakeFiles/SpiritTower.dir
+D:/Unity/PROYECTOS/Spirit_TowerG/Spirit_Tower/SpiritTower/cmake-build-debug/CMakeFiles/edit_cache.dir
